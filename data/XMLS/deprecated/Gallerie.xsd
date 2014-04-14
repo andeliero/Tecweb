@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" targetNamespace = "http://www.musicbreak.com" xmlns = "http://www.musicbreak.com" elementFormDefault = "qualified">
+    <xsd:element name="gallerie" type="TGallerie">
+        <xsd:unique name="unique-id">
+            <xsd:selector xpath="galleria"/>
+            <xsd:field xpath="@id"/>
+        </xsd:unique>
+    </xsd:element>
+	
+    <xsd:complexType name="TGallerie">
+        <xsd:sequence>
+            <xsd:element name="galleria" type="TGalleria" maxOccurs = "unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+        
+    <xsd:complexType name="TGalleria">
+        <xsd:sequence>
+            <xsd:element name="foto" type="TFoto" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:positiveInteger" />
+    </xsd:complexType>
+ 
+    <xsd:complexType name="TFoto">
+        <xsd:sequence>
+            <xsd:element name="titolo" type="xsd:string" maxOccurs="1" />
+            <xsd:element name="srcPath" type="xsd:string" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

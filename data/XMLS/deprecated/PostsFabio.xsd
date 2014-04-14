@@ -1,0 +1,207 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" targetNamespace = "http://www.musicbreak.com" xmlns = "http://www.musicbreak.com" elementFormDefault = "qualified">
+
+    <xsd:element name="posts" type="TPosts" />
+
+    <xsd:complexType name="TPosts">
+        <xsd:sequence>
+            <xsd:element name="eventi" type="TEventi" maxOccurs = "1" />
+            <xsd:element name="recensioni" type="TRecensioni" maxOccurs = "1" />
+            <xsd:element name="interviste" type="Tinterviste" maxOccurs = "1" />
+            <xsd:element name="news" type="TNews" maxOccurs = "1" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!--
+    *******************************************************************************
+    ***********************      Tipo Comune      *********************************
+    *******************************************************************************
+    *******************************************************************************
+    -->
+    <xsd:complexType name="Tcommon">
+        <xsd:sequence>
+            <xsd:element name="titolo" type="xsd:string" />
+            <xsd:element name="foto" type="Tfoto" />
+            <xsd:element name="excerpt" type="Ttesto" />
+            <xsd:element name="descrizione" type="Ttesto" />
+            <xsd:element name="autore" type="xsd:string" />
+            <xsd:element name="data" type="xsd:date" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <!--
+    *******************************************************************************
+    **************************      EVENTI      ***********************************
+    *******************************************************************************
+    *******************************************************************************
+    -->
+
+
+    <xsd:complexType name="TEventi">
+        <xsd:sequence>
+            <xsd:element name="evento" type="TEvento" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+
+    <xsd:complexType name="TEvento">
+        <xsd:complexContent>
+            <xsd:extension base="Tcommon">
+                <xsd:sequence>
+                    <xsd:element name="dataEvento" type="xsd:date"/>
+                    <xsd:element name="NumGiorni" type="xsd:positiveInteger" minOccurs="0"/>
+                    <xsd:element name="luogo" type="xsd:string"/>
+                    <xsd:element name="oraInizio" type="Ttime"/>
+                    <xsd:element name="oraFine" type="Ttime"/>
+                    <xsd:element name="indirizzo" type="xsd:string"/>
+                    <xsd:element name="prezzo" type="Tprezzo"/>
+                    <xsd:element name="email" type="Temail"/>
+                    <xsd:element name="telefono" type="Ttel"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="TidEvento" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Ttime">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{2}:[0-9]{2}"/>
+            <xsd:whiteSpace value="collapse"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Tfoto">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value=".*\.(jpg|jpeg|png|bmp|gif)"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Temail">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Ttel">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{1,}\s([0-9])+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Tprezzo">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="€[0-9]+\.[0-9]{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="Ttesto" mixed="true">
+        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element name="span" type="Tspan" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="Tspan">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="lang" type="xsd:string" />
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="TidEvento">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="e[1-9][0-9]*" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!--
+    *******************************************************************************
+    **************************      RECENSIONI      *******************************
+    *******************************************************************************
+    *******************************************************************************
+    -->
+
+
+    <xsd:complexType name="TRecensioni">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="recensione" type="TRecensione"  />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TRecensione">
+        <xsd:complexContent>
+            <xsd:extension base="Tcommon">
+                <xsd:attribute name="id" type="TidRecensione" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="TidRecensione">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="r[1-9][0-9]*" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!--
+    *******************************************************************************
+    **************************      INTERVISTE      *******************************
+    *******************************************************************************
+    *******************************************************************************
+    -->
+
+    <xsd:complexType name="Tinterviste">
+        <xsd:sequence maxOccurs="unbounded" >
+            <xsd:element name="intervista" type="Tintervista"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Tintervista">
+        <xsd:complexContent>
+            <xsd:extension base="Tcommon">
+                <xsd:sequence><xsd:element name="intervistato" type="xsd:string" /></xsd:sequence>
+                <xsd:attribute name="id" type="TidIntervista" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="TidIntervista">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="i[1-9][0-9]*" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!--
+    *******************************************************************************
+    **************************      NEWS      *************************************
+    *******************************************************************************
+    *******************************************************************************
+    -->
+
+    <xsd:complexType name="TNews">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="item" type="Titem"  />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Titem">
+        <xsd:complexContent>
+            <xsd:extension base="Tcommon">
+                <xsd:attribute name="id" type="TidNews" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+
+    <xsd:simpleType name="TidNews">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="n[1-9][0-9]*" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

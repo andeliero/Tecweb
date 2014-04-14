@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Questo file serve per mettere in relazione le gallerie con i post 
+(di tipo intervista) a cui sono collegati.
+-->
+<root><!-- xmlns="http://www.musicbreak.com" 
+      xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS DBsite.xsd">-->
+    
+    
+    <!-- sezione tags -->
+    <tags>
+        <tag id="0">pop</tag>
+        <tag id="1">dance</tag>
+        <tag id="2">rock</tag>
+        <tag id="3">reaggae</tag>
+        <tag id="4">classica</tag>
+        <tag id="5">raphiphop</tag>
+        <tag id="6">digitalaudio</tag>
+    <tag id="7">sanremo2014</tag><tag id="8">metallica</tag><tag id="9">brucespringsteen</tag><tag id="10">jazz</tag><tag id="11">ska</tag><tag id="12">soul</tag></tags>
+
+    <!-- GALLERIE -->
+    
+    <gallerie>
+        <galleria id="0">
+            <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi0.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemiuno</titolo>
+                <srcPath>/img/interviste/gallery/noemi1.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemidue</titolo>
+                <srcPath>/img/interviste/gallery/noemi2.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemitre</titolo>
+                <srcPath>/img/interviste/gallery/noemi3.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi4.jpg</srcPath>
+            </foto>
+	       <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi5.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi6.jpg</srcPath>
+            </foto>
+	`       <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi7.jpg</srcPath>
+            </foto>
+	        <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi8.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>/img/interviste/gallery/noemi9.jpg</srcPath>
+            </foto>
+        </galleria>
+    </gallerie>
+    
+    <!-- EDITORI -->
+    <editori>
+        <editore id="0">
+            <nome>Mario</nome>
+            <cognome>Rossi</cognome>
+        </editore>
+        <editore id="1">
+            <nome>Fabio</nome>
+            <cognome>Ros</cognome>
+        </editore>
+        <editore id="2">
+            <nome>Luca</nome>
+            <cognome>Bonaldo</cognome>
+        </editore>
+        <editore id="3">
+            <nome>Antonio</nome>
+            <cognome>Banderas</cognome>
+        </editore>
+        <editore id="4">
+            <nome>Gianni</nome>
+            <cognome>Ottimista</cognome>
+        </editore>
+        <editore id="5">
+            <nome>Alessandro</nome>
+            <cognome>Mangio</cognome>
+        </editore>
+    </editori>
+
+    <posts>
+    <!-- EVENTI -->
+    <eventi>
+        <evento id="e0">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+			<tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>	
+    <evento id="e1">
+			<titolo>TAKIN' OFF - Original Vinyl Session</titolo>
+			<foto>
+			<src>/img/eventi/1799957_1478524389033020_58607397_o.jpg</src>
+			<alt>Volantino dell'evento</alt>
+			</foto>
+			<excerpt>A distanza di un anno torna TAKIN' OFF per la sua terza edizione. Location nuova e città nuova ma energia e qualità musicale invariate.</excerpt>
+			<descrizione>Ad accogliervi al SARTEA BAR di Vicenza ci saranno i dischi originali a 45 r.p.m. dei i due promotori della serata!!!
+G.J.--&gt; Mod Jazz/Hammond Groove/Jazzy RB/ComboBeeBomStyle
+A.SHEPHERD--&gt; Mod79/PowerPop/TwoTone/BritPop
+A seguire il prezioso Live Set de:
+I RUDI--&gt; Power Pop/RB from Milano
+Who, Small Faces e Jam nel cuore, ma senza una chitarra in formazione: i Rudi sono un power trio che spazia dall' r'n'b al mod revival e al garage-beat anni '60. L'ingrediente principale sono le tastiere, a cui si aggiungono voce, basso e batteria, il risultato finale non è lontano dal sound spurio dei Merton Parkas o dei Prisoners. Il repertorio dei Rudi si divide equamente tra cover (i classici Ray Charles, Booker T end the Mg's e Brian Auger, ma anche Secret Affair e Chords) e pezzi in italiano di loro composizione contenuti nell' ep di recente uscita intitolato Tre Pezzi di Routine.
+A mettere a dura prova le vostre caviglie-rotule-anche ci penseranno i nostri guest djs:
+TOMMY ROUGHTOUGH --&gt; Ska/Rocksteady/Reggae
+PIERONI --&gt; Soul/Motown/RB</descrizione>
+			<idautore>2</idautore>
+			<data>2014-4-2</data>
+			<tag>10</tag><tag>11</tag><tag>12</tag>
+			<dataEvento>2014-04-25</dataEvento>
+            <luogo>Sartea a Vicenza</luogo>
+            <oraInizio>21:00</oraInizio>
+            <oraFine>00:00</oraFine>
+            <indirizzo>Corso dei santi Felice e Fortunato, 362</indirizzo>
+            <prezzo>0€</prezzo>
+            <email/>
+            <telefono>0000000000</telefono></evento></eventi>
+    <!-- RECENSIONI -->
+    <recensioni>
+        
+        
+    <recensione id="r0">
+			<titolo>Bruce Springsteen, "High hopes" finisce in rete, le prime recensioni </titolo>
+			<foto>
+			<src>/img/recensioni/hhopescover.JPG</src>
+			<alt>Copertina album bruce</alt>
+			</foto>
+			<excerpt>Come riportato da Rockol.com ieri, sabato è finito in rete il nuovo album di Bruce Springsteen</excerpt>
+			<descrizione>Come riportato da Rockol.com ieri, sabato è finito in rete il nuovo album di Bruce Springsteen, "High hopes", atteso per il 14 gennaio. L'album è stato messo accidentalmente in rete da Amazon, che l'ha reso regolarmente acquistabile sulla versione mobile del proprio store americano. Dopo qualche ora il link è stato rimosso, ma diversi fan hanno fatto in tempo a comprarlo legelamente (ed è partita la discussione su board, blog e social network). Conseguentemente, ecco anche le prime recensioni del disco, tra cui quella dei nostri cugini di Rockol.com che potete leggere qua
+            </descrizione>
+			<idautore>2</idautore>
+			<data>2014-3-24</data>
+			<tag>9</tag>
+			</recensione></recensioni>
+    
+    <!-- INTERVISTE -->
+    <interviste>
+        <intervista id="i0">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>/img/interviste/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>3</idautore>
+            <data>2013-12-04</data>
+			<tag>0</tag>
+			<tag>7</tag>		
+            <intervistato>Noemi</intervistato>
+			<galleria>0</galleria>
+        </intervista>
+    </interviste>
+    
+    <!-- NEWS -->
+    <news>
+        <item id="n0">
+            <titolo>Richard Benson uno Svitato!</titolo>
+            <foto>
+                <src>/img/news/richardbenson.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Per tastare il polso alla giovane scena rock ravennate abbiamo fatto una chiacchierata con due componenti del quartetto ravennate Actionmen, Matteo Pozzi e Diego Pasini, rispettivamente chitarra/voce e basso di una band completata da Ram Das Libero Foschi (chitarra e voce) e Mattia “Pinna” De Paoli (batteria).Per chi non li conoscesse, gli Actionmen sono un gruppo che suona principalmente pezzi punk-rock e sono conosciuti anche all'estero. Il loro debutto – l'album The Game (2005) pubblicato da Unicorn Records – gli ha dato l'opportunità di emergere e farsi conoscere da un pubblico eterogeneo.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>4</idautore>
+            <data>2014-01-20</data>
+			<tag>1</tag>
+        </item>
+    <item id="n1">
+			<titolo>Sanremo 2014, un mese dopo: i risultati in classifica e nelle radio. Ahi ahi...</titolo>
+			<foto>
+			<src>/img/news/Sanremo_2014_logo.jpg</src>
+			<alt>Logo di Sanremo</alt>
+			</foto>
+			<excerpt>Nei giorni del Festival di Sanremo Rockol ha pubblicato, serata dopo serata, un mio commento “a caldo” su quanto si era sentito in TV. Mi è stato fatto notare, e rimproverato, che dopo la serata di sabato</excerpt>
+			<descrizione>Il Festival di Sanremo 2014, dal punto di vista delle canzoni (che è quello che importa a Rockol) non è stato certamente indimenticabile. Non è stato nemmeno fra i peggiori che io ricordi, certo. Ma tutto sommato mi pare di poter dire che mediamente le canzoni che abbiamo ascoltato si sono collocate sopra la sufficienza. Quasi ovvio, data l’autorevolezza della direzione artistica di Mauro Pagani. Per sapere se Pagani e i suoi hanno scelto davvero bene bisognerebbe poter ascoltare anche le canzoni scartate e non ammesse al Festival – e non sono in grado di farlo. Dò per scontato che le scelte siano state fatte seguendo un criterio di qualità, per come “qualità” è stato inteso dalla direzione artistica (sarebbe invece tutto da discutere il criterio della “contemporaneità”, sbandierato in conferenza stampa e del quale non mi pare di aver trovato riscontri effettivi nelle canzoni). Quindi, per la stima che ho nei confronti di Pagani, voglio anche credere che la presenza di Raphael Gualazzi sia stata frutto solo ed esclusivamente di una scelta di qualità, e che il fatto che Gualazzi sia un collaboratore fisso della trasmissione “Che tempo che fa”, condotta dallo stesso conduttore del Festival, Fabio Fazio, non abbia pesato minimamente sulla valutazione di Pagani e C. (voglio crederlo: ma mi riesce difficile, lo capite anche voi). Sarebbe stato più elegante evitare questo piccolo conflitto di interesse? Sì, certo. Ma tant’è... A Fazio si tende a perdonare molto: se lo stesso favoritismo (chiamiamolo con il suo nome) fosse stato perpetrato da altri, le anime belle della stampa si sarebbero strappate le vesti. Quel che comunque non c’era, fra le canzoni di Sanremo 2014, era la canzone innegabilmente superiore alla media, quella destinata a diventare, se non un evergreen, almeno un grande successo. Non c’era però nemmeno la canzone decisamente brutta, quella da buttar via o da trasformare in fenomeno trash. Da qui, da questa uniformità, è derivata forse anche la sensazione di tedio (nobile, ma pur sempre tedio) che ha avvolto la manifestazione. </descrizione>
+			<idautore>2</idautore>
+			<data>2014-3-24</data>
+			<tag>7</tag>
+			</item><item id="n2">
+			<titolo>I Metallica condividono il demo di 'Lords of summer'</titolo>
+			<foto>
+			<src>/img/news/MetallicaLive10.jpg</src>
+			<alt>James che suona la chitarra</alt>
+			</foto>
+			<excerpt>Dopo aver eseguito il nuovo brano "Lords of summer" per la prima volta dal vivo, domenica 16 marzo, i Metallica hanno ovviamente visto i fan scatenarsi online con spezzoni e video completi del brano live</excerpt>
+			<descrizione>Il nuovo disco dei <ciao>Four Horsemen</ciao> al momento non ha ancora una tabella di marcia, nel senso che non Ã¨ dato sapere quando la band entrerà effettivamente in studio e quando intende pubblicare il nuovo lavoro. Si tratterebbe comunque del decimo disco dei Metallica.
+Inoltre non è automatico che "Lords of summer" venga utilizzata per il disco in questa forma; anzi, recentemente Lars Ulrich, parlando con Rolling Stone USA, ha chiaramente detto che potrebbe non accadere, come giÃ  sperimentato in occasione di "Death magnetic": all'epoca la band, live, suonava in anteprima due canzoni - "New song 1" e "New song 2". "New song 2" non Ã¨ stata usata, mentre la parte centrale di "New song 1" Ã¨ finita in "All nightmare long" e l'intro in "The end of the line". "Noi lavoriamo cosÃ¬", ha detto Ulrich, "le cose vengono modificate, spostate. Questo va qui, quello va lÃ , il resto lo scartiamo e l'intro lo usiamo per la quinta canzone!". </descrizione>
+			<idautore>2</idautore>
+			<data>2014-3-24</data>
+			<tag>8</tag>
+			</item></news>   
+    </posts>
+
+      
+</root>

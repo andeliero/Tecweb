@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" targetNamespace = "http://www.musicbreak.com" xmlns = "http://www.musicbreak.com" elementFormDefault = "qualified">
+    <xsd:element name="valutazioni" type="TValutazioni" />
+    <xsd:complexType name="TValutazioni">
+        <xsd:sequence>
+            <xsd:element name="valutazione" type="TValutazione" maxOccurs = "unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+        
+    <xsd:complexType name="TValutazione">
+        <xsd:sequence>
+            <xsd:element name="voto" type="Tvoto" maxOccurs = "1" />
+            <xsd:element name="idPost" type="xsd:positiveInteger" maxOccurs = "1" />
+            <xsd:element name="email" type="TEmail" maxOccurs = "1" />
+        </xsd:sequence>
+    </xsd:complexType>
+        
+    <xsd:simpleType name="Tvoto">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="5"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="TEmail">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>
