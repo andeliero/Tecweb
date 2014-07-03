@@ -18,7 +18,7 @@
             <xsd:element name="username" type="TUsername"/>
             <xsd:element name="password" type="TPassword"/>
         </xsd:sequence>
-        <xsd:attribute name="id" type="xsd:positiveInteger" />
+        <xsd:attribute name="id" type="xsd:nonNegativeInteger" />
     </xsd:complexType>
         
           

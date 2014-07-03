@@ -1,10 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <!--
-Creo un unico file xml perché ho la necesssità di mantenere vincoli di integrità
-referenziale tra le varie strutture
-
-Ora assumiamo la corretteza per costruzione da script perl, questo per alleggerire 
+Ora assumiamo la correttezza per costruzione da script perl, questo per alleggerire 
 il sistema ed evitare inutili rallentamenti.
 -->
 
@@ -40,7 +37,7 @@ il sistema ed evitare inutili rallentamenti.
     <xsd:complexType name="Ttag">
         <xsd:simpleContent>
             <xsd:extension base="xsd:string">
-                <xsd:attribute name="id" type="xsd:positiveInteger" />
+                <xsd:attribute name="id" type="xsd:nonNegativeInteger" />
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -57,15 +54,17 @@ il sistema ed evitare inutili rallentamenti.
         <xsd:sequence>
             <xsd:element name="foto" type="TFoto" minOccurs="1" maxOccurs="unbounded" />
         </xsd:sequence>
-        <xsd:attribute name="id" type="xsd:positiveInteger" />
+        <xsd:attribute name="id" type="xsd:nonNegativeInteger" />
     </xsd:complexType>
  
     <xsd:complexType name="TFoto">
         <xsd:sequence>
-            <xsd:element name="titolo" type="xsd:string" maxOccurs="1" />
+            <xsd:element name="titolo" type="Ttesto" maxOccurs="1" />
             <xsd:element name="srcPath" type="xsd:string" maxOccurs="1" />
         </xsd:sequence>
     </xsd:complexType>
+    
+    
     
     <!-- Gallerie Definition END -->
     
@@ -82,7 +81,7 @@ il sistema ed evitare inutili rallentamenti.
             <xsd:element name="nome" type="TNomeCognome"/>
             <xsd:element name="cognome" type="TNomeCognome"/>
         </xsd:sequence>
-        <xsd:attribute name="id" type="xsd:positiveInteger" />
+        <xsd:attribute name="id" type="xsd:nonNegativeInteger" />
     </xsd:complexType>
         
     <xsd:simpleType name="TNomeCognome">
@@ -146,13 +145,13 @@ il sistema ed evitare inutili rallentamenti.
     -->
     <xsd:complexType name="Tcommon">
         <xsd:sequence>
-            <xsd:element name="titolo" type="xsd:string" />
+            <xsd:element name="titolo" type="Ttesto" />
             <xsd:element name="foto" type="Tfoto" />
             <xsd:element name="excerpt" type="Ttesto" />
             <xsd:element name="descrizione" type="Ttesto" />
-            <xsd:element name="idautore" type="xsd:positiveInteger" />
+            <xsd:element name="idautore" type="xsd:nonNegativeInteger" />
             <xsd:element name="data" type="xsd:date" />
-            <xsd:element name="tag" type="xsd:positiveInteger" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="tag" type="xsd:nonNegativeInteger" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -178,7 +177,7 @@ il sistema ed evitare inutili rallentamenti.
             <xsd:extension base="Tcommon">
                 <xsd:sequence>
                     <xsd:element name="dataEvento" type="xsd:date"/>
-                    <xsd:element name="NumGiorni" type="xsd:positiveInteger" minOccurs="0"/>
+                    <xsd:element name="NumGiorni" type="xsd:nonNegativeInteger" minOccurs="0"/>
                     <xsd:element name="luogo" type="xsd:string"/>
                     <xsd:element name="oraInizio" type="Ttime"/>
                     <xsd:element name="oraFine" type="Ttime"/>
@@ -222,7 +221,7 @@ il sistema ed evitare inutili rallentamenti.
 
     <xsd:simpleType name="Ttel">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="[0-9]{1,}\s([0-9])+"/>
+            <xsd:pattern value="[0-9]{1,}(\s([0-9])+)*"/>
         </xsd:restriction>
     </xsd:simpleType>
 
@@ -249,7 +248,7 @@ il sistema ed evitare inutili rallentamenti.
 
     <xsd:simpleType name="TidEvento">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="e[1-9][0-9]*" />
+            <xsd:pattern value="e[0-9][0-9]*" />
         </xsd:restriction>
     </xsd:simpleType>
 
@@ -278,7 +277,7 @@ il sistema ed evitare inutili rallentamenti.
 
     <xsd:simpleType name="TidRecensione">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="r[1-9][0-9]*" />
+            <xsd:pattern value="r[0-9][0-9]*" />
         </xsd:restriction>
     </xsd:simpleType>
 
@@ -300,7 +299,7 @@ il sistema ed evitare inutili rallentamenti.
             <xsd:extension base="Tcommon">
                 <xsd:sequence>
                     <xsd:element name="intervistato" type="xsd:string" />
-                    <xsd:element name="galleria" type="xsd:positiveInteger" />
+                    <xsd:element name="galleria" type="xsd:nonNegativeInteger" />
                 </xsd:sequence>
                 <xsd:attribute name="id" type="TidIntervista" use="required" />
             </xsd:extension>
@@ -310,7 +309,7 @@ il sistema ed evitare inutili rallentamenti.
 
     <xsd:simpleType name="TidIntervista">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="i[1-9][0-9]*" />
+            <xsd:pattern value="i[0-9][0-9]*" />
         </xsd:restriction>
     </xsd:simpleType>
 
@@ -338,12 +337,8 @@ il sistema ed evitare inutili rallentamenti.
 
     <xsd:simpleType name="TidNews">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="n[1-9][0-9]*" />
+            <xsd:pattern value="n[0-9][0-9]*" />
         </xsd:restriction>
     </xsd:simpleType>
 
-   
-        
-    
-        
 </xsd:schema>

@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use utf8;
 use XML::LibXSLT;
 use XML::LibXML;
 use CGI qw/:standard/;
@@ -9,51 +10,37 @@ use CGI::Session;
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use CFUN;
 
-my $path = CFUN::getpath();
 my $cgi = CGI->new();
-my $parser = XML::LibXML->new();
-my $xslt = XML::LibXSLT->new();
+my $path = CFUN::getpath();
 
-my $DBpath = "../data/XML/Amministratori.xml";
-my $source = XML::LibXML->load_xml(location => $DBpath);
-
-my $username;
-my $password;
-
-if (defined $cgi->param('username')){
-	$username = $cgi->param('username');
-}
-if (defined $cgi->param('password')){
-	$password = $cgi->param('password');
+my $iu=CFUN::getSession();
+if($iu ne undef){
+  CFUN::redir("/cgi-bin/adminbk.cgi?type=n");
 }
 
-my $ptradmins = $source->findnodes("/amministratori/admin");
-my $found = 0;
-my $ptruser;
-for (my $var = 0; $var < $ptradmins->size() && !$found; $var++) {
-	my $user = $ptradmins->get_node($var);
-	my $name = $user->findnodes("username")->get_node(1)->textContent;
-	if ($name eq $username){
-		$ptruser=$user;
-		$found=1;
-	}
+my $errmsg = '';
+if (defined $cgi->param('err')){
+	$errmsg="<p class='error'>".$cgi->param('err')."</p>";
 }
 
-my $rdr;
-if($found == 1){
-	my $pass = $ptruser->findnodes("password")->get_node(1)->textContent;
-	if($password eq $pass){
-		my $attruser = $ptruser->findnodes("\@id")->get_node(1)->textContent;
-		my $session = new CGI::Session(undef, $cgi, {Directory=>"../data/tmp"});
-		$session->param('userid', $attruser);
-
-		$rdr ="/cgi-bin/adminbk.cgi?type=n";
-	}else{
-		$rdr ="/cgi-bin/admin.cgi?err=password%20sbagliata";
-	}
-}else{
-	$rdr ="/cgi-bin/admin.cgi?err=username%20sbagliato";
-}
-
-print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
-CFUN::redir($rdr);
+print $cgi->header({-type=>'text/html', -charset=>'utf-8'});
+print CFUN::printHead("Login - Music Break","musica, news, news musicali, notizie, album","/javascript/resources/jquery-2.1.1.min.js" ,"/javascript/backend.js","/javascript/screen.js");
+print CFUN::printHeader(1);
+print CFUN::printNav('l');
+print "
+    <div class='common_box'>
+      <h1>Pagina di <span xml:lang='en'>Login</span></h1>
+    </div>
+    <div class='common_box'>
+        <form action='$path/cgi-bin/checklogin.cgi' enctype='multipart/form-data' method='post' onsubmit='return checkLogin();'>
+        <fieldset id='formfield'><legend class='hidelegend'>Form di Autenticazione</legend>
+           <label for='username'><span xml:lang='en'>Username: </span></label>
+           <div><input type='text' name='username' id='username' onclick='Wbar(\"username\");' onblur='Bbar(\"username\");' /></div>
+           <label for='password'><span xml:lang='en'>Password: </span></label>
+           <div><input type='password' name='password' id='password' onclick='Wbar(\"password\");' onblur='Bbar(\"password\");' /></div>
+           <input type='submit' value='Accedi' />
+           $errmsg
+        </fieldset>
+        </form>
+    </div>";
+print CFUN::printFooter;

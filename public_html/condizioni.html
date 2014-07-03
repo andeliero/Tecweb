@@ -14,10 +14,11 @@
         <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen.css"/>
         <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
         <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
-        <script type="text/javascript" src="./javascript/screen.js"></script>
+        <script type='text/javascript' src='/tecweb/~fros/javascript/resources/jquery-2.1.1.min.js'></script><script type='text/javascript' src='/tecweb/~fros/javascript/screen.js'></script>
         <title>Condizioni - Music Break</title>
     </head>
-    <body onload="defsearch();">
+    <body>
+        <div id="container">
         <div id="header">
             <a class="help" href="#nav">salta intestazione</a>
             <div id="title"><span id="logo" class="notAural"><a href="home.html"><img src="./img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa  una pausa di semiminima"/></a></span>
@@ -29,21 +30,20 @@
         <div id="nav">
             <a class="help" href="#search">salta menù</a>
             <ul>
-                <li><a href="home.html"><span xml:lang="en">Home</span></a></li>
-                <li><a href="news.html"><span xml:lang="en">News</span></a></li>
-                <li><a href="interviste.html">Interviste</a></li>
-                <li><a href="recensioni.html">Recensioni</a></li>
-                <li><a href="eventi.html">Eventi</a></li>
+                <li><a href="/tecweb/~fros/cgi-bin/home.cgi"><span xml:lang="en">Home</span></a></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=n'><span xml:lang="en">News</span></a></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=i'>Interviste</a></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=r'>Recensioni</a></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=e'>Eventi</a></li>
+		        <li><a href='/tecweb/~fros/cgi-bin/login.cgi'><span xml:lang="en">Login</span></a></li>
             </ul> 
-            <div id="search">
-                <a class="help" href="#contents">salta barra di ricerca</a>
-                <input type="text" id="text_field" title="inserire una ricerca" value="" onclick="searchbar();" onblur="defsearch();" name="query"/>
-                <input type="submit" id="button" alt="cerca" value="Cerca"></input>
-            </div>
+	    <form action='/tecweb/~fros/cgi-bin/searchtags.cgi' method='get'><fieldset id='search' ><legend class='hidelegend'>Form di ricerca</legend>
+	    <input type='text' name='tag' title='inserire una ricerca' id='text_field' value='Cerca per tag...' />
+	    <input type='submit' id='button' value='Cerca' /></fieldset>
+	    </form>
         </div>
-
+<div id="breadcrumb"><ul><li><a href="/tecweb/~fros/cgi-bin/home.cgi">Home&gt;&gt;</a></li><li>Condizioni d'uso</li></ul></div>
         <div id="contents">
-            <h1>condizioni d'uso</h1>
             <a class="help" href="#footer">salta contenuto</a>
             <div class="article_box">
                 <div id="static_cont">
@@ -55,6 +55,7 @@
                     <p>Nessun dato personale degli utenti viene in proposito acquisito dal sito. Non viene fatto uso di cookies per la trasmissione di informazioni di carattere personale. In questo sito non si ricorre ad altre tecniche informatiche potenzialmente pregiudizievoli per la riservatezza della navigazione degli utenti e che consentono l’acquisizione di dati personali identificativi dell’utente. Il vostro indirizzo IP viene registrato ai soli fini statistici e non viene in alcun modo messo in relazione ad altri dati per tracciare attività od acquisire dati personali sull’utente.</p>
                 </div>
             </div>
+        </div>
         </div>
         <div id="footer">
             <a class="help" href="#header">salta testo a fine pagina</a>

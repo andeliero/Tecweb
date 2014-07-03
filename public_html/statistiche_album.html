@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="author" content="Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero"/>
+        <meta name="language" content="italian it"/>
+        <meta name="rating" content="safe for kids" />
+        <meta name="description" content="Statistiche vendite 2013, Il portale di news, articoli, recensioni ed eventi dedicato alla musica"/>
+        <meta name="keywords" content="vendite, statistiche, musica, news, news musicali, notizie, album"/>
+        <meta name="keywords" content="music, magazine, news"/>
+        <meta name="robots" content="all" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <link rel="icon" href="./img/fav.ico" type="image/icon" />
+        <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen.css"/>
+        <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
+        <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
+        <script type='text/javascript' src='/tecweb/~fros/javascript/resources/jquery-2.1.1.min.js'></script><script type='text/javascript' src='/tecweb/~fros/javascript/screen.js'></script>
+        <title>Classifica Vendite - Music Break</title>
+    </head>
+    <body>
+        <div id="container">
+        <div id="header">
+            <a class="help" href="#nav">salta intestazione</a>
+            <div id="title"><span id="logo" class="notAural"><a href="home.html"><img src="./img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa  una pausa di semiminima"/></a></span>
+                <h1><a href="home.html"><span xml:lang="en">Music Break</span></a></h1>
+                <h2>Il portale di notizie dedicato alla musica</h2>
+            </div>
+        </div>
+
+        <div id="nav">
+            <a class="help" href="#search">salta menù</a>
+            <ul>
+                <li><a href="/tecweb/~fros/cgi-bin/home.cgi"><span xml:lang="en">Home</span></a></li>
+                <li id="current_nav"><p><span xml:lang="en">News</span></p></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=i'>Interviste</a></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=r'>Recensioni</a></li>
+                <li><a href='/tecweb/~fros/cgi-bin/show.cgi?type=e' >Eventi</a></li>
+		<li><a href='/tecweb/~fros/cgi-bin/login.cgi'><span xml:lang="en">Login</span></a></li>
+            </ul> 
+            <form action='/tecweb/~fros/cgi-bin/searchtags.cgi' method='get'>
+		<fieldset id='search' >
+		    <legend class='hidelegend'>Form di ricerca</legend>
+		    <input type='text' name='tag' title='inserire una ricerca' id='text_field' value='Cerca per tag...' />
+		    <input type='submit' id='button' value='Cerca' />
+		</fieldset>
+	    </form>
+        </div>
+<div id="breadcrumb"><ul><li><a href="/tecweb/~fros/cgi-bin/home.cgi">Home &gt;&gt;</a></li>
+<li><a href="/tecweb/~fros/cgi-bin/show.cgi?type=n">News &gt;&gt; </a></li>
+<li>Album più venduti nel 2013</li></ul></div>
+        <div id="contents">
+            <div class="article_box">
+                <a class="help" href="#footer">salta contenuto</a>
+                <div id="static_tabella">
+                   
+			
+		<table id="tabella" summary="Classifica dei dieci album più venduti in Italia nel 2013">
+		<caption>Album più venduti nel 2013</caption>
+		<thead>
+		<tr>
+			<th colspan="5" class="theader" scope=”colgroup”>Album più venduti</th>
+		</tr>
+		<tr>
+			<th scope="col" class="theader"> Posizione </th>
+			<th scope="col" class="theader"> Artista </th>
+			<th scope="col" class="theader"> Titolo </th>
+			<th scope="col" class="theader"> Vendite </th>
+			<th scope="col" class="theader"> Casa Discografica </th>
+		</tr>
+		</thead>
+		<tfoot>
+		<tr>
+			<th colspan="5" class="theader">Album più venduti</th>
+		</tr>
+		<tr>
+			<th scope="col" class="theader"> Posizione </th>
+			<th scope="col" class="theader"> Artista </th>
+			<th scope="col" class="theader"> Titolo </th>
+			<th scope="col" class="theader"> Vendite </th>
+			<th scope="col" class="theader" abbr=”label”> Casa Discografica </th>
+		</tr>
+		</tfoot>
+		<tbody>
+		<tr>
+			<th scope="row"> 1 </th>
+			<th scope="row" class="name">Luciano Ligabue</th>
+			<td>Mondovisione</td>
+			<td>più di 300000</td>
+			<td>Zoo Aperto</td>		
+		</tr>
+		<tr>
+			<th scope="row"> 2 </th>
+			<th scope="row" class="name">Modà</th>
+			<td>Gioia</td>
+			<td>più di 250000</td>
+			<td>Ultrasuoni</td>	
+		</tr>
+		<tr>
+			<th scope="row"> 3 </th>
+			<th scope="row">Lorenzo Jovanotti</th>
+			<td><span xml:lang="en">Backup</span> - Lorenzo 1987-2012</td>
+			<td>più di 240000</td>
+			<td>Universal</td>			
+		</tr>
+		<tr>
+			<th scope="row"> 4 </th>
+			<th class="name">Moreno</th>
+			<td>Stecca</td>
+			<td>più di 140000</td>
+			<td>Universal</td>
+		</tr>
+		<tr>
+			<th scope="row"> 5 </th>
+			<th class="name">Emma</th>
+			<td>Schiena</td>
+			<td>più di 130000</td>
+			<td>Universal</td>	
+		</tr>
+		<tr>
+			<th scope="row"> 6 </th>
+			<th class="name">Fedez</th>
+			<td>Sig. <span xml:lang="en">Brainwash</span> - L'arte di Accontentare</td>
+			<td>più di 120000</td>
+			<td xml:lang="en">Sony Music</td>	
+		</tr>
+		<tr>
+			<th scope="row"> 7 </th>
+			<th class="name">Marco Mengoni</th>
+			<td>Pronto a Correre</td>
+			<td>più di 120000</td>
+			<td xml:lang="en">Sony Music</td>	
+		</tr>
+		<tr>
+			<th scope="row"> 8 </th>
+			<th class="name" xml:lang="en">One Direction</th>
+			<td xml:lang="en">Midnight Memories</td>
+			<td>più di 110000</td>
+			<td xml:lang="en">Sony Music</td>	
+		</tr>
+		<tr>
+			<th scope="row"> 9 </th>
+			<th class="name">Laura Pausini</th>
+			<td>20 <span xml:lang="en">The Greatest Hits</span></td>
+			<td>più di 100000</td>
+			<td xml:lang="en">Atlantic Records</td>	
+		</tr>
+		<tr>
+			<th scope="row"> 10 </th>
+			<th class="name">Max Pezzali</th>
+			<td>Max 20</td>
+			<td>più di 90000</td>
+			<td xml:lang="en">Warner Music</td>	
+		</tr>
+		</tbody>
+	</table>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="footer">
+            <a class="help" href="#header">salta testo a fine pagina</a>
+            <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict"/></a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" /></a>
+            <p>&copy; 2014 <span xml:lang="en">Music Break All Right Reserved.</span> | 
+                <a href="chi_siamo.html"> Chi siamo</a> |  
+                <a href="condizioni.html">Condizioni d'uso</a>  | 
+                <a href="contatti.html"> Contatti</a> 
+            </p>
+        </div>
+
+    </body>
+</html>

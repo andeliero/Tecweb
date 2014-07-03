@@ -1,26 +1,34 @@
-/***** Impostazioni stile CSS generali per la visualizzazione sul web *****/
+/****** IMPOSTAZIONI STILE CSS PER VISUALIZZAZIONE SUL WEB ******/
 *{
     margin: 0;
     padding: 0;
     border: 0;
 }
-body{
-    background: #F5F6F6; 
-    background: -moz-linear-gradient(-45deg, #F5F6F6 0%, #DBDCE2 21%, #B8BAC6 49%, #DDDFE3 80%, #F5F6F6 100%); 
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#F5F6F6), color-stop(21%,#DBDCE2), color-stop(49%,#B8BAC6), color-stop(80%,#DDDFE3), color-stop(100%,#F5F6F6)); 
-    background: -webkit-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-    background: -o-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-    background: -ms-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-    background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
+
+
+html,body{
+    background: #CCCCCC; 
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /***** Impostazioni stile CSS per aiuto alla navigazione *****/
 .help{
-   position:absolute;
-   height:0;
-   overflow:hidden;
+   position: absolute;
+   height: 0;
+   overflow: hidden;
 }
+
+
+#container{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -1.5em; 
+    padding-bottom: 1%;
+}
+
 
 /***** Impostazioni stile CSS dell'header *****/
 #header{
@@ -31,7 +39,7 @@ body{
 #logo img{
    float: left;
    width: 8%;
-   min-width: 80px;
+   min-width: 60px;
 }
 /** Stile del titolo **/
 #title{
@@ -48,15 +56,21 @@ body{
    font-variant: small-caps;
    font-style: oblique;
    padding-top: 1%;
-   padding-left: 10%;
 }
 #title h2{
    font-family: Georgia, serif;
    font-size: 1.0em;
    padding-top: 1%;
-   padding-left: 25%;
+   padding-left: 15%;
 }
-
+#title a{
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+}
+#title a:hover{
+    text-decoration: underline;
+}
 /***** Impostazioni stile CSS del menù di navigazione *****/
 #nav{	
    display: inline-block;
@@ -68,9 +82,9 @@ body{
 }
 #nav ul{
    float: left;
-   width: 60%;
+   width: 65%;
    list-style-type: none;
-   padding-left: 8%;
+   padding-left: 4%;
 }
 #nav ul li{
    display: inline-block;
@@ -96,36 +110,18 @@ body{
 #nav ul li a:visited{
    color: #FF66FF;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#nav{
-   border-bottom-style: none;
-}	
-#nav ul{
-   width: 100%;
-   padding-left: 0;
-}
-#nav ul li{
-   display: block;
-   width: 80%;
-   margin: 1% auto;
-}
-#current_nav{
-   padding: 0.5% 0;
-}
-#nav ul li a{
-   padding: 0.6% 0;
-}
-}
+
 
 /***** Impostazioni stile CSS per barra di ricerca *****/
+.hidelegend{
+   display: none;
+}
 #search{
    float: right;
-   padding-top: 0.3%;
-   margin-right: 1%;
+   padding-top: 0.4%;
+   width: 30%;
 }
-#text_field
-{
+#text_field{
    background-image: url('../css/img/search.jpg');
    background-size: 25px 25px;
    background-repeat: no-repeat;
@@ -137,41 +133,51 @@ body{
 }
 #button{
    width: auto;
+   padding: 0.05%;
    font-size: 1.3em;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#search{
-   float: none;
-   width: 100%;
-   margin: 1% auto;
-   text-align: center;
+#button:hover{
+   opacity: 0.4;
+   cursor: pointer;
 }
-#text_field, #button{
-   display: inline-block;
-   width: auto;
-}
-} 
 
-/***** Impostazioni stile CSS per il contenuto delle pagine ****/
+
+/***** Impostazioni di stile per breadcrumb *****/
+#breadcrumb {
+   width: 80%;
+   margin: 0.5% auto;
+}
+#breadcrumb ul{
+   font-weight: bold;
+   line-height: 1em;
+   font-size: 1.4em;
+}
+#breadcrumb li{
+   display: inline-block; 
+   font-variant: small-caps;
+   list-style-type: none;
+   padding: 0.3em;
+}
+#breadcrumb a:visited{
+   color: #990099;
+}
+
+
+/***** Impostazioni stile CSS per il contenuto delle pagine *****/
 #contents_home{
    float: left;
    width: 80%;
 }
-#contents h1, #contents_home h1{
-   font-variant: small-caps;
-   font-size: 1.8em;
-   text-align: center;
-   padding-top: 0.5%;
-}
 /** Stile contenuto article **/
 .article:nth-child(odd){
-   float: left;
-   margin: 1% 0 1% 5%;
+   float: right;
+   clear: right;
+   margin: 0.5% 5% 2% 0;
 }
 .article:nth-child(even){
-   float: right;
-   margin: 1% 5% 1% 0;
+   float: left;
+   clear: left;
+   margin: 0.5% 0 2% 5%; 
 }
 .article{
    width: 40%;
@@ -182,30 +188,39 @@ body{
    -moz-box-shadow: 0px 0px 5px 3px #303030;
    -webkit-box-shadow: 0px 0px 5px 3px #303030;
    padding: 1%;
+   overflow: hidden;
 }
-.article a:visited{
-   color: #FF66FF;
-}
-.article h2 a{
+.article h1 a{
+   float: left;
+   width: 100%;
+   font-size: 0.9em;
    color: #000000;
    text-decoration: none;
 }
-.article h2 a:hover{
+.article h1 a:hover{
    text-decoration: underline;
+}
+.article a:visited{
+   color: #990099;
 }
 .author{
    float: right;
    font-size: 0.8em;
    font-style: italic;
 }
+.article p{
+   float: left;
+}
+.continua{
+   clear: both;
+   float: left;
+}
 /** Stile visualizzazione dei tags **/
 .tags{
    display: block;
+   clear: both;
    list-style: none;
-   margin: 1% auto;
-}
-ul.tags {
-   margin-top:0px;
+   margin: 1em auto;
 }
 .tags li, .tags a{
    float: right;
@@ -213,6 +228,7 @@ ul.tags {
    height: 24px;
    line-height:24px;
    font-size: 0.9em;
+   margin-bottom: 2px;
 }
 .tags a{
    margin-left: 24px;
@@ -257,56 +273,63 @@ ul.tags {
    box-shadow: -1px -1px 2px #004977;
 }
 .tags a:hover{
-   background: #555555;
+   background: #333333;
    color: #FFFFFF;
 }
 .tags a:hover:before{
-   border-color:transparent #555555 transparent transparent;
+   border-color:transparent #333333 transparent transparent;
 }
 .tags a:visited{
-   background: #555555;
+   background: #333333;
+   color: #FF66FF;
 }
 .tags a:visited:before{
-   border-color:transparent #555555 transparent transparent;
+   border-color:transparent #333333 transparent transparent;
 }
+
 /** Stile immagini degli article **/
 .article img{
    width: 100%;
-   padding: 1% 0;
+   max-height: 30em;
 }
+
 /** Stile per scorrimento pagine **/
 #nav_pagine{
    clear: both;
+   float: left;
+   width: 100%;
    text-align: center;
-   padding: 1% 0;
+   padding-bottom: 2%;
 }
 #nav_pagine a{
    color: #0000FF;
-   padding-right: 0.3%;
-   padding-left: 0.3%;
+   padding: 0 1%;
 }
 .nav_help{
    clear: both;
-   width: 100%;
+   width: 50%;
    display: block;
    background-image: url('../css/img/tornaSu.png');
    background-size: 30px 30px;
    background-repeat: no-repeat;
    background-position: top center;
    text-align: center;
+   margin: 0 auto;
 }
 .nav_help a{
-   padding-top: 1.5em;
+   padding: 1.5em;
    display: block;
 }
-.nav_help:nth-child(4n), .nav_help:nth-child(4n+4){
+.nav_help a:visited{
+   color: #990099;
+}
+.article .nav_help{
    display: none;
 }
 
 /** Stile visualizzazione article intero **/
 .article_box{
     width: 80%;
-    text-align: center;
     background-color: #FFFFFF;
     border-style: solid;
     border-width: 1px;
@@ -314,15 +337,18 @@ ul.tags {
     -moz-box-shadow: 0px 0px 5px 3px;
     -webkit-box-shadow: 0px 0px 5px 3px;
     padding: 1%;
-    margin: 5% auto;
+    margin: 2% auto;
+    overflow: hidden;
+}
+.article .ribbon{ 
+    margin: -3%;
 }
 .ribbon{
     float: left;
     margin: -1.5%;
-    padding: 0;
     background-repeat: no-repeat;
-    height: 90px;
-    width: 119px;
+    height: 85px;
+    width: 125px;
     text-indent:-999999px;
 }
 .eventRibbon{
@@ -338,53 +364,54 @@ ul.tags {
     background-image: url('../css/img/ribbonsRecensioniMini.png');
 }
 .article_img{
-    width: 100%;
-    margin-top: 5px;
+    float: left;
+    max-width: 40%;
+    max-height: 20em;
+    margin: 1% 30%;
 }
-.article_box h1:first-of-type{
-    text-align: left !important;
-    font-size: 1.8em !important;
+.article_box h1{    
+    display: block;
+    float: left;
+    font-size: 1.8em; 
     font-weight: bold;
 }
-.article_box h2:first-of-type{
-    text-align: center !important;
-    font-size: 0.9em !important;
+.article_box h2{   
+    float: right;
+    font-size: 0.9em;
     color: #1C1C1C;
 }
-#descrizione{
-    width: 80%;
-    margin: 2em auto;
+.article_box h3{
+    clear: both;
+    font-size: 0.9em;
 }
-#title a{
-    color: #FFFFFF;
-    text-decoration: none;
+.article_box p{
+    float: left;
 }
-#title a:hover{
-    text-decoration: underline;
+.article_box .tags{
+    clear: both; 
 }
-#interlocutore{
-    margin-top: 1em;
+.article_box .nav_help{
+    display: none;
 }
 
 #galleryLink p:first-of-type:hover{
     font-size: 103%;
 }
 #informazioni ul{
-    width: 80%;
-    margin: 1em auto;
+    clear: both;
+    margin: 1% auto;
     text-align: left;
     list-style-type: none;
 }
 #Titologallery{
-    padding: 0.5em 0;
-    width: 20%;
     background-color: #000000;
     color: #FFFFFF;
-    height: auto;
-    display: block;
-    font-variant: small-caps;
+    text-align: center;
+    width: 100%;
+    margin: 2% 0;
+    padding: 1% 0;
 }
-/** Stile per contenuto pagine statiche **/
+/***** Stile per contenuto pagine statiche *****/
 #static_cont p{
     font-size: 1.3em;
     padding: 1%;
@@ -398,32 +425,14 @@ ul.tags {
     padding-left: 2%;
 }
 #static_list li{
-    list-style-type: none;
-    padding-bottom: 2%;
+    clear: both;
+    padding: 2%;
+    margin-left: 10%;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#contents_home{
-    width: 100%;
+#static_list li p{
+    float: right;
 }
-.article{
-    float: none;
-    display: block;
-    width: 90%;
-    margin: 2% auto;
-} 
-.nav_help{
-   clear: both;
-   width: 100%;
-   text-align: center;
-}
-.nav_help:nth-child(4n), .nav_help:nth-child(4n+4){
-   display: block;
-}
-.tags{
-   margin: 1.8em auto;
-}
-}
+
 
 /***** Impostazioni di stile CSS per la sidebar nella homepage *****/
 #sidebar{
@@ -497,27 +506,6 @@ ul.tags {
 #sidebar a:visited{
    color: #FF66FF;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#sidebar{ 
-    clear: both;
-    float: none;
-    display: block;
-    width: 95%;
-    text-align: center;
-    margin: 1% auto;
-}
-#sidebar h1{
-    margin: 2% auto;
-}
-#sidebar li {
-    padding: 1.5%;
-}
-.box{
-    padding-top: 1%;
-    margin-bottom: 5%;
-}
-}
 
 
 /***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
@@ -531,12 +519,14 @@ ul.tags {
     -moz-box-shadow: 0px 0px 5px 3px #303030;
     -webkit-box-shadow: 0px 0px 5px 3px #303030;
     padding: 1%;
-    margin: 2% auto 4% auto;
+    margin: 1% auto 2%;
+    overflow: hidden;
 }
 .Intestazione{
     float: left;
     width: 8%;
     text-align: center;
+    font-variant: small-caps;
     background-color: #550000;
     color: #FFFFFF;
     margin-right: 0.4%;
@@ -558,22 +548,20 @@ ul.tags {
 }
 .copertina{
     width: 90%;
-    height: 20em;
+    height: 30em;
     overflow: hidden;
 }
 .copertina img{
     width: 100%;
     height: auto; 
-    margin: -3.5em;
 }
-.copertina h2{
+.copertina h1{
     position: relative;
-    display: inline;
-    top: 60%;
-    left: 15%;
-    width: auto;
+    display: inline-block;
+    width: 100%;
     font-size: 2.0em;
     font-variant: small-caps;
+    text-align: center;
     background-color: #000000;
     border: 1px solid #45484D; 
     -webkit-box-sizing: border-box;  
@@ -581,12 +569,11 @@ ul.tags {
     box-sizing: border-box;         
     padding: 1% 3%;
 }
-.copertina h2 a{
+.copertina h1 a{
    color: #FFFFFF;
-   text-decoration: none;
 }
-.copertina h2 a:hover{
-   text-decoration: underline;
+.copertina h1 a:visited{
+   color: #FF66FF;
 }
 .dettagli p.description, .dettagli p.info{
    margin-top: 1.5%;
@@ -594,38 +581,26 @@ ul.tags {
 .info span{
    font-weight: bold;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 1000px){
-.Intestazione{
-    float: none;
-    clear: both;
-    width: 90%;
-    margin: 0 auto;
-}
-.evento p{
-    width: 90%;
-    margin: 2% auto;
-}
-.copertina{
-    height: auto;
-}
-.copertina img{
-    margin: 0 10%;
-}
-.copertina h2{
-    top: 5.5em;
-    left: 15%;
-    font-size: 1.4em;
-}
-}
+
 
 /***** Impostazioni stile CSS per il piede *****/
+#footer, #push{
+    height: 1.5em;
+    clear: both;	
+}
 #footer{
-   clear: both;
+   width: 100%;
    background-color: #45484D;
-   text-align: center;
    color: #FFFFFF;
+   background-image: url('../css/img/valid_wcag_aa.gif') , url('../css/img/valid_xhtml_10.gif');
+   background-size: 5% , 5%;
+   background-repeat: no-repeat , no-repeat;
+   background-position: 89% 50% , 96% 50%;
    padding: 1%;
+}
+#footer p{
+   width: 80%;
+   text-align: center;
 }
 #footer a{
    color: #33CCFF;
@@ -634,12 +609,6 @@ ul.tags {
    float: left;
    border: 0;
    width: 5%;
-}
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#footer img{
-   width: 9%;
-}
 }
 
 
@@ -655,6 +624,10 @@ ul.tags {
     -webkti-box-shadow: 0px 0px 5px 3px;
     padding: 1%;
     margin: 5% auto;
+    overflow: hidden;
+}
+.common_box h1 {
+    font-variant: small-caps;
 }
 .common_box label{
     display: block;
@@ -684,7 +657,11 @@ ul.tags {
     -moz-box-shadow: 0px 0px 5px 3px;
     -webkit-box-shadow: 0px 0px 5px 3px;
     padding: 0.3em 0.8em;
-    margin: 10% auto;
+    margin: 3% auto;
+}
+input[type="submit"]:hover{
+    opacity: 0.4;
+    cursor: pointer;
 }
 .common_box p, .common_box a{
     display: block;
@@ -697,38 +674,45 @@ ul.tags {
     border: 0;
 }
 .common_box a{
-    color: #00F;
+    color: #0000FF;
 }
 .common_box a:hover{
     text-decoration: underline;
 }
+#inserisci:hover{
+    opacity: 0.4;
+    cursor: pointer;
+}
+.tradLink{
+    background-color: #FFFFFF;
+    color: #0000FF;
+    text-decoration: underline;
+    margin: 0 0.5%;
+}
+.tradLink:hover{
+    cursor: pointer;
+}
 #elencoArticoliCancellazione li{
     list-style-type: none;
 }
-
 #elencoArticoliCancellazione li a{
     font-weight: bold;
     background-image: url('./img/delete.png');
-    color:#000;
-    padding-left:5%;
-    background-size:contain;
+    color: #000000;
+    padding-left: 5%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
-
-
-/***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
-.jsErr{
-    color: red;
-    font-weight: bold;
+.error{
+    font-size: 0.8em !important;
+    color: #FF0000;
 }
-.jsHelp{
-    color: green;
-    font-weight: bold;
-}
+
 
 /***** Impostazioni stile CSS per galleria immagini *****/
 #gallery{
     margin: 1em auto;
+    text-align: center;
 }
 #gallery ul{
     margin-top: 2em;
@@ -746,27 +730,23 @@ ul.tags {
     max-width:80%;
     height:500px;
 }
-#prev{
-    margin-left: 30%;
-    display: inline-block;
+#prev, #next{
     width: 10%;
     height: 3.2em;
-    background-image: url('../javascript/img/arrow-left.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.6;
 }
-#next{
-    margin-right:30%;
+#prev{
+    margin-left: 30%;
     display: inline-block;
-    width: 10%;
-    height: 3.2em;
+    background-image: url('../javascript/img/arrow-left.png');
+}
+#next{
+    margin-right: 30%;
+    display: inline-block;
     background-image: url('../javascript/img/arrow-right.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.6;
 }
 #prev:hover, #next:hover{
     opacity: 1;
@@ -781,7 +761,7 @@ ul.tags {
     border-top: #33CCFF 5px solid;
     height: 7em;
     width: 80%;
-    background-color:#CACAB1;
+    background-color: #999966;
     list-style-type: none;
     padding-left: 0.5%;
     margin: 0 auto;
@@ -791,10 +771,10 @@ ul.tags {
     padding: 0;
 }
 .tnail{
-    float:left;
+    float: left;
     width: 8%;
     max-height: 150px;
-    overflow:hidden;
+    overflow: hidden;
     padding: 0.3em 0.3em;
     padding-top: 0;
     cursor: pointer;
@@ -802,17 +782,236 @@ ul.tags {
 .tnail:hover{
     opacity: 0.5;
 }
-@media only screen and (max-width: 959px){
-.slide{
-   max-width:80%;
+
+
+/***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
+.jsErr{
+    color: red;
+    font-weight: bold;
+}
+.jsHelp{
+    color: green;
+    font-weight: bold;
+}
+#submitErr{
+    display: block;
+}
+
+
+/***** Impostazioni stile tabella *****/
+#tabella{
+    margin-left: auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin-right: auto;
+}
+tr{
+    margin: 0;
+    padding: 0;
+}
+tr:nth-child(even){
+    background-color: #CACAB1;
+}
+td, th{
+    border: 1px solid #000000;
+    padding: 0.3em;
+}
+.theader{
+    margin: 0px;
+    padding: 0.3em;
+    border: 1px solid #000000;
+    background-color: #33CCFF;
+    color: #000000;
+}
+.name{
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/********* IMPOSTAZIONI STILE PER TABLET *********/
+@media only screen and (max-width: 1024px){
+/***** Impostazioni stile CSS del menù di navigazione *****/
+#nav{
+   border-bottom-style: none;
+   width: 100%;
+   margin: 0 auto;
+} 	
+#nav ul{
+   width: 100%;
+   padding-left: 0;
+}
+#nav ul li{
+   display: block;
+   width: 80%;
+   margin: 1% auto;
+}
+#current_nav{
+   padding: 0.5% 0;
+}
+#current_nav p{
+   font-size: 1.3em;
+}
+#nav ul li a{
+   font-size: 1.3em;
+   padding: 0.6% 0;
+}
+/***** Impostazioni stile CSS per barra di ricerca *****/
+#search{
+   width: 100%;
+   margin: 1% auto;
+   text-align: center;
+}
+#text_field, #button{
+   display: inline-block;
+}
+/***** Impostazioni stile CSS per il contenuto delle pagine *****/
+#contents_home{
+    width: 100%;
+}
+.article:nth-child(even) , .article:nth-child(odd){
+    float: none;
+    display: block;
+    width: 90%;
+    margin: 2% auto;
+} 
+.nav_help{
+    display: none;
+}
+.article .nav_help, .article_box .nav_help, .evento .nav_help{
+    display: block;
+}
+.nav_help{
+    background-size: 20px 20px;
+}
+.nav_help a{
+    font-size: 0.7em;
+}
+li.article .ribbon{ 
+    margin: -0.6em;
+}
+.article_box h3{
+    font-size: 0.8em;
+}
+/***** Impostazioni di stile CSS per la sidebar nella homepage *****/
+#sidebar{ 
+    clear: both;
+    float: none;
+    display: block;
+    width: 95%;
+    text-align: center;
+    margin: 1% auto;
+}
+#sidebar h1{
+    margin: 2% auto;
+}
+#sidebar li {
+    padding: 1.5%;
+}
+.box{
+    padding-top: 1%;
+    margin-bottom: 5%;
+}
+/***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
+.Intestazione{
+    float: none;
+    clear: both;
+    width: 90%;
+    margin: 0 auto;
+}
+.dettagli{
+    width: 90%;
+    margin: 0 auto;
+}
+.copertina{
+    width: 100%;
+    height: auto;
+}
+.copertina h1{
+    font-size: 1.4em;
+}
+/***** Impostazioni stile CSS per il piede *****/
+#footer{
+   font-size: 0.6em;
    height: auto;
+   margin-top: 2%;
+}
+/***** Impostazioni stile CSS per visualizzazione della parte ADMIN *****/
+.common_box{
+    width: 90%;
+}
+/***** Impostazioni stile CSS per galleria immagini *****/
+.slide{
+   max-width: 80%;
+   height: auto;
+}
+#next, #prev{
+   padding: 0 5%;
 }
 #controlnav{
    height: 2em;
 }
+/***** Impostazioni stile tabella *****/
+#static_tabella{
+    overflow-x: scroll;
+}
 }
 
 
+/********** IMPOSTAZIONI STILE SMARTPHONE **********/
+@media only screen and (max-width: 1024px) and (orientation: portrait){
+/***** Impostazioni stile CSS del menù di navigazione *****/
+#current_nav p , #nav ul li a{
+   font-size: 2em;
+}
+/***** Impostazioni stile CSS per barra di ricerca *****/
+#text_field , #button {
+   font-size: 2em;
+}
+/***** Impostazioni di stile per breadcamp *****/
+#breadcrumb{
+   font-size: 1.3em;
+}
+/***** Impostazioni stile CSS per il contenuto delle pagine *****/
+.article h1 a{
+   font-size: 1.3em;
+}
+.author{
+   font-size: 1em;
+}
+.article p , .article_box p {
+   font-size: 1.2em;
+}
+.nav_help{
+   background-size: 30px 30px;
+}
+.nav_help a{
+   font-size: 1em;
+}
+#nav_pagine a{
+   padding: 0 3%;
+}
+.article_box h3{
+    font-size: 0.6em;
+}
+/***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
+.copertina h1{
+   font-size: 2.5em;
+}
+.dettagli p.description, .dettagli p.info, #descrizione{
+   font-size: 0.8em;
+}
+/***** Impostazioni stile CSS per il piede *****/
+#footer{
+   background-position: 89% 90% , 96% 90%;
+   background-size: 7% , 7%;
+}
+#footer img{
+   width: 7%;
+}
+}
 
+
+	
 
 

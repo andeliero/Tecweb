@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-La Password andrà modificata con un algoritmo di criptaggio, intanto la inserisco in chiaro
--->
-<amministratori><!-- xmlns="http://www.musicbreak.com" 
+<amministratori><!-- xmlns="http://www.musicbreak.com/admin" 
             xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
             xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS Amministratori.xsd">-->
     <admin id="0">
-        <username>baronerampante</username>
-        <password>malpelo</password>
+        <username>correzione</username>
+        <password>0fa3c82b1dcd0b2c9efa017a7bedc7fc</password><!--progetto-->
     </admin>
     <admin id="1">
-        <username>tecnoboy</username>
-        <password>tunztunz789</password>
+        <username>utente2</username>
+        <password>0fa3c82b1dcd0b2c9efa017a7bedc7fc</password>
     </admin>
     <admin id="2">
-        <username>getlucky</username>
-        <password>daftpunk90</password>
+        <username>utente3</username>
+        <password>0fa3c82b1dcd0b2c9efa017a7bedc7fc</password>
     </admin>
     <admin id="3">
-        <username>bandegialla</username>
-        <password>yellow1212</password>
+        <username>utente4</username>
+        <password>0fa3c82b1dcd0b2c9efa017a7bedc7fc</password>
     </admin>
     <admin id="4">
-        <username>optimusprime</username>
-        <password>lego4ever</password>
+        <username>utente5</username>
+        <password>0fa3c82b1dcd0b2c9efa017a7bedc7fc</password>
     </admin>
     <admin id="5">
-        <username>alessandro92</username>
-        <password>alexthegr8</password>
+        <username>utente6</username>
+        <password>0fa3c82b1dcd0b2c9efa017a7bedc7fc</password>
     </admin>
 </amministratori>

@@ -2,12 +2,14 @@
 
 use strict;
 use warnings;
+use utf8;
 use XML::LibXSLT;
 use XML::LibXML;
 use CGI qw/:standard/;
 use CGI::Session;
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use Time::localtime;
+use Email::Valid;
 use CFUN;
 
 my $path=CFUN::getpath();
@@ -16,12 +18,14 @@ my $xml = XML::LibXML->new();
 my $xslt = XML::LibXSLT->new();
 my $DBpath = "../data/XML/DBsite.xml";
 my $source = XML::LibXML->load_xml(location => $DBpath);
+my $idutente=CFUN::getSession();
+if($idutente eq undef){
+    CFUN::redir("/cgi-bin/login.cgi");
+}
 
-
-
-my $idutente=2;#CFUN::getsession();
 my $tm = localtime;
 my ($day,$month,$year)=($tm->mday,$tm->mon+1,$tm->year+1900);
+
 
 
 my $fail = 0;
@@ -39,7 +43,7 @@ my $filename;
 my $imgpath = CFUN::getfolderpath($type);
 if($cgi->param('src') eq ""){
 	$fail=1;
-	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
+	$msg = $msg."msg2=nome%20del%20file%20vuoto&&";
 }
 else{$filename=$cgi->param('src');}
 
@@ -97,33 +101,77 @@ if($type eq 'e'){
 
 	if((!defined $cgi->param('oraInizio')) && $cgi->param('oraInizio') eq ""){
 		$fail=1;
-		$msg=$msg."msg10=manca%20ora%20inizio&&";
-	}else{$oraInizio=$cgi->param('oraInizio');}
+		$msg.="msg10=manca%20ora%20inizio&&";
+	}else{
+	    #<xsd:pattern value="[0-9]{2}:[0-9]{2}"/>
+	    $oraInizio=$cgi->param('oraInizio');
+	    if($oraInizio=~m/[0-9]{2}\:[0-9]{2}$/ && substr($oraInizio,0,2)<24 && substr($oraInizio,3,2)<60){
+		#ora valida
+	    }else{
+		$fail=1;
+		$msg.="msg10=oraInizio%20non%20valida&&";
+	      }
+	    }
 
 	if((!defined $cgi->param('oraFine')) && $cgi->param('oraFine') eq ""){
 		$fail=1;
-		$msg=$msg."msg11=manca%20ora%20fine&&";
-	}else{$oraFine=$cgi->param('oraFine');}
+		$msg.="msg11=manca%20ora%20fine&&";
+	}else{
+	  #<xsd:pattern value="[0-9]{2}:[0-9]{2}"/>
+	  $oraFine=$cgi->param('oraFine');
+	  if($oraFine=~m/[0-9]{2}\:[0-9]{2}$/ && substr($oraFine,0,2)<24 && substr($oraFine,3,2)<60){
+		#ora valida
+	    }else{
+		$fail=1;
+		$msg.="msg11=oraFine%20non%20valida&&";
+	      }
+	  }
 
 	if((!defined $cgi->param('indirizzo')) && $cgi->param('indirizzo') eq ""){
 		$fail=1;
-		$msg=$msg."msg12=manca%20ora%20fine&&";
+		$msg=$msg."msg12=manca%20indirizzo&&";
 	}else{$indirizzo=$cgi->param('indirizzo');}
 
 	if((!defined $cgi->param('prezzo')) && $cgi->param('prezzo') eq ""){
 		$fail=1;
-		$msg=$msg."msg13=manca%20il%20prezzo&&";
-	}else{$price=$cgi->param('prezzo');}
-
-	if((!defined $cgi->param('email')) && $cgi->param('email') eq "" && $email !~ m/^\w{2,}\.*\-*\w*\@\w{2,}(\.\w{2,4})+$/){
+		$msg.="msg13=manca%20il%20prezzo&&";
+	}else{
+	    #<xsd:pattern value="€[0-9]+\.[0-9]{2}"/>
+	    $price=$cgi->param('prezzo');
+	    if($price=~m/[0-9]+\.[0-9]{2}$/){
+		#numero di telefono valido
+		$price="€".$price;
+	    }else{
 		$fail=1;
-		$msg=$msg."msg14=manca%20la%20mail&&";
-	}else{$mail=$cgi->param('mail');}
+		$msg=$msg."msg13=prezzo%20non%20valido&&";
+	      }
+	    }
+
+	if((!defined $cgi->param('email')) && $cgi->param('email') eq ""){
+		$fail=1;
+		$msg.="msg14=manca%20la%20mail&&";
+	}else{
+	  #<xsd:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*"/>
+	  close ($MYFILE);
+	  if (! $mail=~m/^([\w\-\+\.]+)\@([\w\-\+\.]+)\.([\w\-\+\.]+)$/) {
+	    $fail=1;
+	    $msg.="msg14=indirizzo%20email%20nonvalido&&";
+	  }
+	}
 
 	if((!defined $cgi->param('telefono')) && $cgi->param('telefono') eq ""){
 		$fail=1;
 		$msg=$msg."msg15=manca%20il%20telefono&&";
-	}else{$phone=$cgi->param('telefono');}
+	}else{
+	    #<xsd:pattern value="[0-9]{1,}\s([0-9])+"/>
+	    $phone=$cgi->param('telefono');
+	    if($phone=~m/[0-9]{10}$/){
+		#numero di telefono valido
+	    }else{
+		$fail=1;
+		$msg=$msg."msg15=numero%20di%20telefono%20non%20valido&&";
+	    }
+	}
 }
 
 my $intervistato;
@@ -139,28 +187,30 @@ if ($type eq 'i'){
 	my @gal = $cgi->upload("fgallery");
 	my @galnms = $cgi->param("fgallery");
 	my $galsize = scalar @gal;
-	for(my $var = 0; $var< $galsize; $var++){
-		if(@gal[$var]){
-			@gallery[$var]=@gal[$var];
-			@gallerynames[$var]=@galnms[$var];
-		}
-	}	
+	if($galsize==0){
+	    $fail=1;
+	    $msg=$msg."msg8=nessuna%20foto%20aggiunta";
+	}else{
+	    for(my $var = 0; $var< $galsize; $var++){
+		    if(@gal[$var]){
+			    @gallery[$var]=@gal[$var];
+			    @gallerynames[$var]=@galnms[$var];
+		    }
+	    }
+	}
 }
 if ($fail) {
-	CFUN::redir("$path/cgi-bin/adminbk.cgi?type=".$type.$msg);
+	CFUN::redir("/cgi-bin/adminbk.cgi?type=".$type.$msg);
 }else{
-	CFUN::scrivifile($srcfoto,$filename,$imgpath);
-	my $size = scalar @gallery;
-	for (my $var = 0; $var < $size; $var++) {
-		CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
-	}
+	
 	my $vincolo = CFUN::getvincpath($type);
 	my $ptrposts = $source->findnodes("/root/posts/$vincolo");
 	my $father = $ptrposts->get_node(1)->parentNode;
 	my $id = CFUN::getuniqueid($ptrposts,$type);
+	
 	my $tagnodes = CFUN::buildtagnodes($tags,$source);
 	if ($type eq 'e') {
-		my $fotopath = "/img/eventi/$filename";
+		my $fotopath = "/img/eventi/photopost$id.jpg";
 		my $strpost="<evento id='$id'>
 			<titolo>$titolo</titolo>
 			<foto>
@@ -183,7 +233,7 @@ if ($fail) {
 		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
 		$father->appendChild($novopost);
 	}elsif ($type eq 'r') {
-		my $fotopath = "/img/recensioni/$filename";
+		my $fotopath = "/img/recensioni/photopost$id.jpg";
 		my $strpost="<recensione id='$id'>
 			<titolo>$titolo</titolo>
 			<foto>
@@ -199,9 +249,9 @@ if ($fail) {
 		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
 		$father->appendChild($novopost);
 	}elsif ($type eq 'i'){
-		my $fotopath = "/img/inteviste/$filename";
-		my @gallerie = CFUN::creategallery($source,\@gallerynames);
-		my $idgallery = scalar @gallerie;#creare anche il nodo gallery
+		my $fotopath = "/img/interviste/photopost$id.jpg";
+		my $idgallery = CFUN::creategallery($source,\@gallerynames);
+		
 		my $strpost="<intervista id='$id'>
 			<titolo>$titolo</titolo>
 			<foto>
@@ -218,8 +268,13 @@ if ($fail) {
 			</intervista>";
 		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
 		$father->appendChild($novopost);
+		
+		my $size = scalar @gallery;
+		for (my $var = 0; $var < $size; $var++) {
+		    CFUN::scrivifile(@gallery[$var],"photogalleria-$idgallery-$var.jpg","../public_html/img/interviste/gallery/");
+		}
 	}elsif ($type eq 'n'){
-		my $fotopath = "/img/news/$filename";
+		my $fotopath = "/img/news/photopost$id.jpg";
 		my $strpost="<item id='$id'>
 			<titolo>$titolo</titolo>
 			<foto>
@@ -235,8 +290,9 @@ if ($fail) {
 		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
 		$father->appendChild($novopost);
 	}
+	CFUN::scrivifile($srcfoto, "photopost$id.jpg" ,$imgpath);
 	open(OUT,">$DBpath");
 	print OUT $source->toString;
 	close(OUT);
-	CFUN::redir("$path/cgi-bin/adminbk.cgi?type=".$type."&msg=post%20inserito%20con%20successo");
+	CFUN::redir("/cgi-bin/adminbk.cgi?type=".$type."&msg=post%20inserito%20con%20successo");
 }

@@ -4,12 +4,12 @@ function searchbar(){
  document.getElementById("text_field").value="";
 }
  function defsearch(){
- document.getElementById("text_field").value="Cerca...";
+ document.getElementById("text_field").value="Cerca per tag...";
 }
 
 /* GALLERY */
 
-var index=1,last,last0;
+var index=1;
 var li= document.getElementsByClassName("slide");
 
 function next() {
@@ -43,3 +43,10 @@ function change(i){
     document.getElementById("t"+index).setAttribute("class","activenav");
     return true;
 }
+
+//---jQuery
+$(document).ready(function() {
+
+$("#text_field").click(	function(){searchbar();});
+$("#text_field").blur(	function(){defsearch();});
+});

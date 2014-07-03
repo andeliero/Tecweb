@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Questo file serve per mettere in relazione le gallerie con i post 
-(di tipo intervista) a cui sono collegati.
--->
 <root><!-- xmlns="http://www.musicbreak.com" 
       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
       xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS DBsite.xsd">-->
-    
-    
     <!-- sezione tags -->
     <tags>
         <tag id="0">pop</tag>
@@ -17,7 +11,30 @@ Questo file serve per mettere in relazione le gallerie con i post
         <tag id="4">classica</tag>
         <tag id="5">raphiphop</tag>
         <tag id="6">digitalaudio</tag>
-    <tag id="7">sanremo2014</tag><tag id="8">metallica</tag><tag id="9">brucespringsteen</tag><tag id="10">jazz</tag><tag id="11">ska</tag><tag id="12">soul</tag></tags>
+	<tag id="7">sanremo2014</tag>
+	<tag id="8">metallica</tag>
+	<tag id="9">brucespringsteen</tag>
+	<tag id="10">jazz</tag>
+	<tag id="11">ska</tag>
+	<tag id="12">soul</tag>
+	<tag id="13">sherwood</tag>
+	<tag id="14">tool</tag>
+	<tag id="15">alternativemetal</tag>
+	<tag id="16">francescorenga</tag>
+	<tag id="17">bbking</tag>
+	<tag id="18">bambini</tag>
+	<tag id="19">cartoni</tag>
+	<tag id="20">zoo105</tag>
+	<tag id="21">99posse</tag>
+	<tag id="22">rollingstones</tag>
+	<tag id="23">pearljam</tag>
+	<tag id="24">eddievedder</tag>
+	<tag id="25">metalcore</tag>
+	<tag id="26">metal</tag>
+	<tag id="27">trivium</tag>
+	<tag id="28">muse</tag>
+	<tag id="29">singolo</tag>
+    <tag id="30">caparezza</tag><tag id="31">ligabue</tag><tag id="32"> mondovisione</tag><tag id="33">moda'</tag><tag id="34"> pop</tag><tag id="35">thevoice</tag><tag id="36">electrovenice</tag><tag id="37"> elettronica</tag><tag id="38">emma marrone</tag><tag id="39"> rock</tag></tags>
 
     <!-- GALLERIE -->
     
@@ -51,7 +68,7 @@ Questo file serve per mettere in relazione le gallerie con i post
                 <titolo>noemiquattro</titolo>
                 <srcPath>/img/interviste/gallery/noemi6.jpg</srcPath>
             </foto>
-	`       <foto>
+			<foto>
                 <titolo>noemiquattro</titolo>
                 <srcPath>/img/interviste/gallery/noemi7.jpg</srcPath>
             </foto>
@@ -64,7 +81,22 @@ Questo file serve per mettere in relazione le gallerie con i post
                 <srcPath>/img/interviste/gallery/noemi9.jpg</srcPath>
             </foto>
         </galleria>
-    </gallerie>
+	<galleria id="1">
+	  <foto><titolo>nome-della-foto 400x600renga.jpg</titolo><srcPath>/img/interviste/gallery/400x600renga.jpg</srcPath></foto>
+	  <foto><titolo>nome-della-foto FR_TEMPOREALE_cover.jpg</titolo><srcPath>/img/interviste/gallery/FR_TEMPOREALE_cover.jpg</srcPath></foto>
+	  <foto><titolo>nome-della-foto-Francesco-Renga.jpg</titolo><srcPath>/img/interviste/gallery/Francesco-Renga.jpg</srcPath></foto>
+	</galleria>
+	<galleria id="2">
+	  <foto><titolo>nome-della-foto-ZOO_105_New.jpg</titolo><srcPath>/img/interviste/gallery/ZOO_105_New.jpg</srcPath></foto>
+	  <foto><titolo>nome-della-foto-top_zoo.jpg</titolo><srcPath>/img/interviste/gallery/top_zoo.jpg</srcPath></foto>
+	  <foto><titolo>nome-della-foto-10_Lo_ZOO_105_Upim_POP.jpg</titolo><srcPath>/img/interviste/gallery/10_Lo_ZOO_105_Upim_POP.jpg</srcPath></foto>
+	  </galleria>
+	<galleria id="3">
+	  <foto><titolo>nome-della-foto-eddie-vedder.jpg</titolo><srcPath>/img/interviste/gallery/eddievedder.jpg</srcPath></foto>
+	  <foto><titolo>nome-della-foto-Eddie-Vedder.jpg</titolo><srcPath>/img/interviste/gallery/Eddie-Vedder.jpg</srcPath></foto>
+	  <foto><titolo>nome-della-foto-pearl-jam-performing-live-in-concert-at-the-o2-arena-04.jpg</titolo><srcPath>/img/interviste/gallery/pearl-jam-performing-live-in-concert-at-the-o2-arena-04.jpg</srcPath></foto>
+	  </galleria>
+	<galleria id="4"><foto><titolo>Foto galleria numero 0</titolo><srcPath>/img/interviste/gallery/photogalleria-4-0.jpg</srcPath></foto><foto><titolo>Foto galleria numero 1</titolo><srcPath>/img/interviste/gallery/photogalleria-4-1.jpg</srcPath></foto><foto><titolo>Foto galleria numero 2</titolo><srcPath>/img/interviste/gallery/photogalleria-4-2.jpg</srcPath></foto></galleria><galleria id="5"><foto><titolo>Foto galleria numero 0</titolo><srcPath>/img/interviste/gallery/photogalleria-5-0.jpg</srcPath></foto><foto><titolo>Foto galleria numero 1</titolo><srcPath>/img/interviste/gallery/photogalleria-5-1.jpg</srcPath></foto><foto><titolo>Foto galleria numero 2</titolo><srcPath>/img/interviste/gallery/photogalleria-5-2.jpg</srcPath></foto><foto><titolo>Foto galleria numero 3</titolo><srcPath>/img/interviste/gallery/photogalleria-5-3.jpg</srcPath></foto><foto><titolo>Foto galleria numero 4</titolo><srcPath>/img/interviste/gallery/photogalleria-5-4.jpg</srcPath></foto><foto><titolo>Foto galleria numero 5</titolo><srcPath>/img/interviste/gallery/photogalleria-5-5.jpg</srcPath></foto></galleria><galleria id="6"><foto><titolo>Foto galleria numero 0</titolo><srcPath>/img/interviste/gallery/photogalleria-6-0.jpg</srcPath></foto><foto><titolo>Foto galleria numero 1</titolo><srcPath>/img/interviste/gallery/photogalleria-6-1.jpg</srcPath></foto></galleria><galleria id="7"><foto><titolo>Foto galleria numero 0</titolo><srcPath>/img/interviste/gallery/photogalleria-7-0.jpg</srcPath></foto><foto><titolo>Foto galleria numero 1</titolo><srcPath>/img/interviste/gallery/photogalleria-7-1.jpg</srcPath></foto></galleria></gallerie>
     
     <!-- EDITORI -->
     <editori>
@@ -101,7 +133,7 @@ Questo file serve per mettere in relazione le gallerie con i post
             <titolo>Sixty party</titolo>
             <foto>
                 <src>/img/eventi/sixtyparty.jpg</src>
-                <alt>descrizione della foto</alt>
+                <alt>descrizione-della-foto</alt>
             </foto>
             <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
             <descrizione>
@@ -109,8 +141,7 @@ Questo file serve per mettere in relazione le gallerie con i post
             </descrizione>
             <idautore>1</idautore>
             <data>2014-02-04</data>
-			<tag>1</tag>
-            
+	    <tag>1</tag>
             <dataEvento>2014-04-08</dataEvento>
             <luogo>Roma</luogo>
             <oraInizio>22:00</oraInizio>
@@ -120,71 +151,250 @@ Questo file serve per mettere in relazione le gallerie con i post
             <email>info@sixtyparty.com</email>
             <telefono>0039 333445566</telefono>
         </evento>	
-    <evento id="e1">
-			<titolo>TAKIN' OFF - Original Vinyl Session</titolo>
+	<evento id="e2">
+	    <titolo>Sherwood Festival 2014</titolo>
+	    <foto>
+		<src>/img/eventi/sherwood-festival-14.jpg</src>
+		<alt>Logo-Sherwood-Festival</alt>
+	    </foto>
+	    <excerpt>Annunciate ufficialmente le date dell’edizione 2014 di SHERWOOD FESTIVAL, la storica rassegna indipendente padovana che si tiene, ormai da decenni, nel parcheggio Nord dello Stadio Euganeo di Padova.</excerpt>
+	    <descrizione>Annunciate ufficialmente le date dell’edizione 2014 di SHERWOOD FESTIVAL, la storica rassegna indipendente padovana che si tiene, ormai da decenni, nel parcheggio Nord dello Stadio Euganeo di Padova. Oltre un mese di musica – con i tantissimi concerti del main e del second stage – e un fitto calendario di appuntamenti culturali e di “festival nel festival” che, dall’11 Giugno al 19 Luglio (dieci giorni in più rispetto ai trenta delle scorse edizioni), trasformeranno un parcheggio in uno spazio sociale vivo e pulsante. Un festival sociale e culturale, un appuntamento a larga e sentita partecipazione, un luogo di incontro e di libertà, attraversato ogni sera da migliaia di persone.</descrizione>
+	    <idautore>3</idautore>
+	    <data>2014-04-16</data>
+	    <tag>13</tag>
+	    <dataEvento>2014-06-11</dataEvento>
+            <luogo>Stadio Euganeo di Padova</luogo>
+            <oraInizio>12:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>Via dello Sadio</indirizzo>
+            <prezzo>€5.00</prezzo>
+            <email>sherwood@bosco.it</email>
+            <telefono>3933344556</telefono>
+	</evento>
+    <evento id="e3">
+			<titolo><span lang="en">ElectroVenice</span> 2014</titolo>
 			<foto>
-			<src>/img/eventi/1799957_1478524389033020_58607397_o.jpg</src>
-			<alt>Volantino dell'evento</alt>
+			<src>/img/eventi/photoposte3.jpg</src>
+			<alt>volantino electrovenice</alt>
 			</foto>
-			<excerpt>A distanza di un anno torna TAKIN' OFF per la sua terza edizione. Location nuova e città nuova ma energia e qualità musicale invariate.</excerpt>
-			<descrizione>Ad accogliervi al SARTEA BAR di Vicenza ci saranno i dischi originali a 45 r.p.m. dei i due promotori della serata!!!
-G.J.--&gt; Mod Jazz/Hammond Groove/Jazzy RB/ComboBeeBomStyle
-A.SHEPHERD--&gt; Mod79/PowerPop/TwoTone/BritPop
-A seguire il prezioso Live Set de:
-I RUDI--&gt; Power Pop/RB from Milano
-Who, Small Faces e Jam nel cuore, ma senza una chitarra in formazione: i Rudi sono un power trio che spazia dall' r'n'b al mod revival e al garage-beat anni '60. L'ingrediente principale sono le tastiere, a cui si aggiungono voce, basso e batteria, il risultato finale non è lontano dal sound spurio dei Merton Parkas o dei Prisoners. Il repertorio dei Rudi si divide equamente tra cover (i classici Ray Charles, Booker T end the Mg's e Brian Auger, ma anche Secret Affair e Chords) e pezzi in italiano di loro composizione contenuti nell' ep di recente uscita intitolato Tre Pezzi di Routine.
-A mettere a dura prova le vostre caviglie-rotule-anche ci penseranno i nostri guest djs:
-TOMMY ROUGHTOUGH --&gt; Ska/Rocksteady/Reggae
-PIERONI --&gt; Soul/Motown/RB</descrizione>
-			<idautore>2</idautore>
-			<data>2014-4-2</data>
-			<tag>10</tag><tag>11</tag><tag>12</tag>
-			<dataEvento>2014-04-25</dataEvento>
-            <luogo>Sartea a Vicenza</luogo>
-            <oraInizio>21:00</oraInizio>
-            <oraFine>00:00</oraFine>
-            <indirizzo>Corso dei santi Felice e Fortunato, 362</indirizzo>
-            <prezzo>0€</prezzo>
-            <email/>
-            <telefono>0000000000</telefono></evento></eventi>
+			<excerpt>Manifestazione con concerti e djset di musica elettronica, edizione 2014.</excerpt>
+			<descrizione>Manifestazione con concerti di musica elettronica, edizione 2014.
+Ci saranno un grandissimo numero di <span lang="en">dj</span> internazionali e una scenografia molto elaborata per portare Venezia al top.
+Ci saranno artisti quali <span lang="en">Ritchie Hawtin</span>, <span lang="fr"> Bob Sinclar</span>, <span lang="fr">David Guetta</span>, <span lang="fr"> Martin Solveig</span>
+L'organizzazione vi aspetta numerosi per questo spettacolare appuntamento.
+Non rimarrete delusi!</descrizione>
+			<idautore>0</idautore>
+			<data>2014-7-3</data>
+			<tag>36</tag><tag>37</tag>
+			<dataEvento>07/14/2014</dataEvento>
+            <luogo>Venezia</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>05:00</oraFine>
+            <indirizzo>Parco San Giuliano</indirizzo>
+            <prezzo>€45.00</prezzo>
+	    <email>info@elvenice.it</email>
+            <telefono>3334455667</telefono></evento></eventi>
+    
     <!-- RECENSIONI -->
     <recensioni>
-        
-        
-    <recensione id="r0">
-			<titolo>Bruce Springsteen, "High hopes" finisce in rete, le prime recensioni </titolo>
+	<recensione id="r1">
+	    <titolo>Bruce Springsteen, '<span lang="en">High hopes</span>' finisce in rete, le prime recensioni </titolo>
+	    <foto>
+		<src>/img/recensioni/hhopescover.jpg</src>
+		<alt>Copertina-album-bruce</alt>
+	    </foto>
+	    <excerpt>Come riportato da <span lang="en">Rockol.com</span> ieri, sabato è finito in rete il nuovo album di <span lang="en">Bruce Springsteen</span></excerpt>
+	    <descrizione>Come riportato da <span lang="en">Rockol.com</span> ieri, sabato e' finito in rete il nuovo album di <span lang="en">Bruce Springsteen</span>, "<span lang="en">High hopes</span>", atteso per il 14 gennaio. L'album è stato messo accidentalmente in rete da <span lang="en">Amazon</span>, che l'ha reso regolarmente acquistabile sulla versione <span lang="en">mobile</span> del proprio store americano. Dopo qualche ora il link è stato rimosso, ma diversi fan hanno fatto in tempo a comprarlo legelamente (ed è partita la discussione su <span lang="en">board</span>, <span lang="en">blog</span> e <span lang="en">social network</span>). Conseguentemente, ecco anche le prime recensioni del disco, tra cui quella dei nostri cugini di <span lang="en">Rockol.com</span> che potete leggere qua</descrizione>
+	    <idautore>2</idautore>
+	    <data>2014-03-24</data>
+	    <tag>9</tag>
+	</recensione>
+	<recensione id="r2">
+	    <titolo>99 Posse Curre Curre Guaglio</titolo>
+	    <foto>
+		<src>/img/recensioni/99Posse-3.jpg</src>
+		<alt>la-band-99-posse</alt>
+	    </foto>
+	    <excerpt>La Storia non si ferma e non fa un passo indietro. Al limite si ripete, tiene il ritmo, si guarda indietro, ma la linea del tempo scorre inarrestabile in avanti.</excerpt>
+	    <descrizione>La Storia non si ferma e non fa un passo indietro. Al limite si ripete, tiene il ritmo, si guarda indietro, ma la linea del tempo scorre inarrestabile in avanti. E cosÃ¬ la storia dei 99 Posse corre e corre ancora dopo 20 anni con la stessa energia di un guaglione.Il 25 marzo 2014 esce Curre Curre Guaglio 2.0. Non un passo indietro, il nuovo disco dei 99 Posse distribuito Artist First, che ripercorre i grandi successi della loro prima discografia e una carriera da record. Come capitoli di un gran bel film, ammirato da milioni di persone negli ultimi ventâanni e che ha vinto parecchi premi, riempiendo cuori e popolando spazi immensi, i 99 Posse dimostrano di essere âpadroni del [loro] tempo per poterlo cambiareâ, sperimentando il remake di 14 canzoni che hanno scosso gli animi e segnato la musica italiana. Nella tracklist evince che la stessa canzone Ã¨ interpretata piÃ¹ volte ma da attori diversi, in modo da proporre diverse prospettive sullo stesso brano, per restituire una visione piÃ¹ ampia, piÃ¹ aperta, quindi piÃ¹ interessante della stessa canzone. E cosÃ¬ rinascono con audaci e fresche sonoritÃ  nuovi modi di cantare âCurre curre guaglioâ, âRipetutamenteâ, âOâ documentoâ, e altri brani registrati, risuonati e rinnovati negli arrangiamenti e nei testi, insieme a celebri artisti, amici dei 99 Posse e con loro protagonisti in questo nuovo disco in prossima uscita, che celebra e rivitalizza un album storico (200.000 copie vendute!). Le canzoni, irrorate di nuovo vigore rap, rock, elettronico o funky, sono addirittura rinominate per sottolineare il cambiamento apportato dalle numerose e importanti featuring con Alborosie, Mama Marias, Caparezza, J-Ax, Clementino, Pau (Negrita), Punkreas, Samuel (Subsonica), Banda Bassotti, Francesco Di Bella (24 Grana), Ensi, Signor K e Bonnot, Valerio Jovine, Enzo Avitabile e i Bottari, Roy Paci, e altri.Oltre ai remake, i 99 Posse propongono in Curre Curre Guaglio 2.0. Non un passo indietro anche 4 nuove canzoni su temi socialmente impegnati, che prolungano il lungometraggio musicale su cui continuare a correre.Dal 25 marzo si continua a girare! Curre Curre Guaglio 2.0. Non un passo indietro in tutti i negozi fisici e digitali!</descrizione>
+	    <idautore>2</idautore>
+	    <data>2014-06-27</data>
+	    <tag>21</tag>
+	    <tag>13</tag>
+	</recensione>
+	<recensione id="r3">
+	    <titolo>I Rolling Stones conquistano Roma - La recensione del concerto</titolo>
+	    <foto>
+		<src>/img/recensioni/roma_concerto_rolling_stones_02.jpg</src>
+		<alt>Rolling-Stone-al-Circo-Massimo-di-Roma</alt>
+	    </foto>
+	    <excerpt>Gli Stones hanno conquistato Roma e lo hanno fatto piazzandosi nel cuore della città, a due passi dal Colosseo dentro l'arena naturale del Circo Massimo.</excerpt>
+	    <descrizione>
+		Un coetaneo di Mick Jagger, perso tra la folla, che saltella cantando Can't get no satisfaction è soltanto una delle istantanee di una notte speciale. Gli Stones hanno conquistato Roma e lo hanno fatto piazzandosi nel cuore della città, a due passi dal Colosseo dentro l'arena naturale del Circo Massimo. Erano in settantamila a celebrare il cinquantaduesimo anno sul palco di Mick Jagger e Keith Richards. Un colpo d'occhio straordinario, qualcosa che certamente resterà per sempre nella memoria di chi c'era. Sul palco e tra la gente. L'inizio è forte con Jumpin' Jack Flash. Segue Let's spend the night together e l'atmosfera si scalda."Che posto meraviglioso" dice Jagger. Fioccano applausi. La celebrazione del mito è iniziata. Per due ore gli Stones rileggono se stessi e la loro storia. Puntando molto sul passato. Sono ottime le vibrazioni che si liberano durante Streets of love uno dei pochi brani recenti che se la gioca alla pari con i classici. C'è anche spazio per un'ovazione a Mick Taylor, il sostituto di Brian Jones, che ricompare per una sanguigna rilettura di Midnight Rambler. Quando non seguono il copione e si lasciano andare, gli Stones regalano, ancora oggi, a settant'anni, quei lampi di lucida follia che hanno reso inimitabile la loro carriera. Jagger presenta tutti i suoi complici in scena. Il volume degli applausi premia come sempre Keith Richards, ma anche Ron Wood, secco come forse non è mai stato ("Non mangia abbastanza pasta") dice il frontman.Richards, camicia verde, capelli argento e sorriso da impunito, si mette al centro della scena con You got the silver. Nella voce, sempre più sgraziata e ruvida ci sono 50 anni di rock on the road vissuti pericolosamente. Naturalmente non mancano Honky Tonk Women e Gimme Shelter. In un crescendo di emozioni arrivano anche Miss You, Sympathy foir the devil e Brown Sugar. Poi, i bis con You can't always get what you want e Satisfaction. Il rito è compiuto. La felicità palpabile dei presenti e la cornice maestosa del luogo sono bellezza. Una grande bellezza.
+	    </descrizione>
+	    <idautore>2</idautore>
+	    <data>2014-06-27</data>
+	    <tag>22</tag>
+	</recensione>
+	<recensione id="r4">
+	    <titolo>Nuovo singolo dei <span lang="en">Muse</span> <span lang="en">Madness</span></titolo>
+	    <foto>
+		<src>/img/recensioni/photopostr4.jpg</src>
+		<alt>Copertina-del-singolo-dei-Muse-Madness</alt>
+	    </foto>
+	    <excerpt>Dopo "Survival" e "Unsustainable", arriva - come già annunciato verso la fine della scorsa settimana - "Madness", il terzo brano estratto dal nuovo album dei Muse "The 2nd law"</excerpt>
+	    <descrizione>Dopo "Survival" e "Unsustainable", arriva - come già annunciato verso la fine della scorsa settimana - "Madness", il terzo brano estratto dal nuovo album dei Muse "The 2nd law" a venire svelato al pubblico dalla band di Matt Bellamy e soci: la canzone, presentata proprio questa sera in anteprima presso la prima emittente radiofonica della BBC, pare essere molto distante, in termini di atmosfere, dai suoi predecessori, attestandosi su sfumature decisamente più malinconiche rispetto a quelle epiche di "Survival" o quelle cupe e influenzate dalla dubstep di "Unsustainable". "Ogni volta che pubblichiamo un nuovo album siamo sempre molto elettrizzati, ma anche nervosi di sapere cosa succederà una volta che verrà spedito nei negozi", ha dichiarato a proposito di "The 2nd law" il batterista Dominic Howard: "Con questo disco ci sembra di aver scoperto qualcosa di nuovo per il nostro gruppo. Ogni nuova prova in studio apre una finestra sul futuro, ma questa è stata capace di farlo molto più delle altre".  </descrizione>
+	    <idautore>1</idautore>
+	    <data>2014-07-01</data>
+	    <tag>28</tag>
+	    <tag>29</tag>
+	</recensione>
+	<recensione id="r5">
+	    <titolo>Strife nuovo singolo <span lang="en">Trivum</span></titolo>
+	    <foto>
+		<src>/img/recensioni/photopostr5.jpg</src>
+		<alt>foto-della-band-Trivium</alt>
+	    </foto>
+	    <excerpt>È di nuovo tempo di uscite ufficiali in casa Trivium. A due anni dal precedente In Waves, album che ha lasciato dietro di sé una scia di pareri contrastanti, tra chi ancora oggi ne tesse le lodi e chi, invece, denuncia la mancanza d innovazione da parte della band statunitense, è ora il turno di Vengeance Falls.</excerpt>
+	    <descrizione>Ottimo inizio con la martellante Brave This Storm, canzone sorretta da una ritmica micidiale e da gradevoli melodie vocali e delle sei corde nei ritornelli. Anche Vengeance Falls e Strife si mantengono su buoni livelli e lasciano ben sperare per il prosieguo del disco; la seconda in special modo risulta particolarmente interessante durante i ritornelli e potrebbe facilmente divenire una hit da concerto per il combo originario della Florida. Incisiva si rivela fin qui la voce di Matt Heafy, ma ancor meglio il lavoro delle chitarre, con Beaulieu e lo stesso Heafy che sfornano riff possenti ed aggressivi al punto giusto. L’apice viene però raggiunto da No Way to Heal, il brano senza dubbio più riuscito dell’intero disco: qui il refrain principale assume un ruolo da assoluto protagonista, mettendo addirittura in secondo piano le altre strofe presenti, ad ogni modo tutte molto gradevoli ed ispirate. Ad un inizio col botto fa seguito un calo abbastanza deciso dalla quinta traccia in poi, con sporadici momenti di ripresa che non bastano a risollevare completamente le sorti dell’album. To Believe potrebbe ben impressionare, ma esclusivamente nel corso dei soliti ritornelli e del bridge che li precede. Sono passati una ventina di minuti appena ed è qua che l’attenzione tende a calare: At the End of This War, Villainy Thrives e Incineration: The Broken World, con la sola eccezione di Through Blood and Dirt and Bone, sono infatti quanto di meno interessante quest’album abbia da proporci. Le solite prevedibili sfuriate di doppia cassa e i riff al fulmicotone non possono certo bastare per tenere alto il livello di attenzione dell’ascoltatore; purtroppo viene a mancare il fattore imprevedibilità ed ogni canzone finisce così per confondersi con la successiva.</descrizione>
+	    <idautore>0</idautore>
+	    <data>2014-7-3</data>
+	    <tag>25</tag><tag>26</tag><tag>27</tag>
+	</recensione>
+    <recensione id="r6">
+			<titolo>Emma Marrone, Schiena - La recensione</titolo>
 			<foto>
-			<src>/img/recensioni/hhopescover.JPG</src>
-			<alt>Copertina album bruce</alt>
+			<src>/img/recensioni/photopostr6.jpg</src>
+			<alt>primo piano emma marrone</alt>
 			</foto>
-			<excerpt>Come riportato da Rockol.com ieri, sabato è finito in rete il nuovo album di Bruce Springsteen</excerpt>
-			<descrizione>Come riportato da Rockol.com ieri, sabato è finito in rete il nuovo album di Bruce Springsteen, "High hopes", atteso per il 14 gennaio. L'album è stato messo accidentalmente in rete da Amazon, che l'ha reso regolarmente acquistabile sulla versione mobile del proprio store americano. Dopo qualche ora il link è stato rimosso, ma diversi fan hanno fatto in tempo a comprarlo legelamente (ed è partita la discussione su board, blog e social network). Conseguentemente, ecco anche le prime recensioni del disco, tra cui quella dei nostri cugini di Rockol.com che potete leggere qua
-            </descrizione>
-			<idautore>2</idautore>
-			<data>2014-3-24</data>
-			<tag>9</tag>
+			<excerpt>Dimentico tutto è un invito a non perdere mai la propria meta.</excerpt>
+			<descrizione>Dimentico tutto è un invito a non perdere mai la propria meta -e ci regala anche un assaggio rap di Emma- (”Il sorriso non lo perder mai, qualunque cosa ti accada”) ed è stato scritto da Nesli e Niccolò Bolchi. Un concetto ripreso anche in Ma che vita fai con un sound che punta ad un voler essere più <span lang="en">rock</span> (”Ma che vita fai, potresti piangere di meno, ed aiutare il tuo destino”) e ricorda molto una sorta di tentativo di ricollegarsi all’energia di Gianna Nannini, paragone che, in certi momenti, è impossibile non avere davanti agli occhi (e nelle orecchie). Non per niente nel precedente album era stata inserita anche la cover di America.</descrizione>
+			<idautore>0</idautore>
+			<data>2014-7-3</data>
+			<tag>38</tag><tag>39</tag>
 			</recensione></recensioni>
     
     <!-- INTERVISTE -->
     <interviste>
         <intervista id="i0">
-            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <titolo>Noemi: 'Sanremo, <span lang="en">The Voice</span> e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco'</titolo>
             <foto>
                 <src>/img/interviste/noemi2.jpg</src>
-                <alt>descrizione della foto</alt>
+                <alt>descrizione-della-foto</alt>
             </foto>
-            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
-            <descrizione>
-                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
-            </descrizione>
+            <excerpt>Sanremo, <span lang="en">The Voice</span> è il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>Sanremo, <span lang="en">The Voice</span> è il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. <span lang="en">Made in London</span>, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. <span lang="en">Made in London</span>, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. <span lang="en">Made in London</span>, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</descrizione>
             <idautore>3</idautore>
             <data>2013-12-04</data>
-			<tag>0</tag>
-			<tag>7</tag>		
+	    <tag>0</tag>
+	    <tag>7</tag>		
             <intervistato>Noemi</intervistato>
-			<galleria>0</galleria>
+	    <galleria>0</galleria>
         </intervista>
-    </interviste>
+	<intervista id="i1">
+	    <titolo>Tempo Reale: intervista con Francesco Renga</titolo>
+	    <foto>
+		<src>/img/interviste/3-foto-cover-no-scritte_oggetto_editoriale_720x600.jpg</src>
+		<alt>Foto-di-Francesco-Renga</alt>
+	    </foto>
+	    <excerpt>Quattro chiacchiere con il cantante bresciano in occasione dell'uscita del suo nuovo album</excerpt>
+	    <descrizione>Per molti e' il vincitore morale di Sanremo 2014: dato tra i favoriti alla vittoria (che poi è andata ad Arisa) con la canzone Vivendo adesso scritta da Elisa, Francesco Renga torna domani 11 marzo con un nuovo album dal titolo Tempo Reale. Sul Festival non ha rimorsi, tanto che Elisa c'e' rimasta più male di me e ne parla in modo divertito e divertente, con la consapevolezza di aver fatto il proprio meglio e, sopratutto di aver portato a un grande pubblico il mio nuovo lavoro. Dico la verità  senza ipocrisia: a quel punto ci stava anche vincere, ma non ero andato per quello. Francesco Renga si presenta all'incontro stampa milanese sorridendo e in piena forma (con chiodo e jeans), nonostante il jet leg: il cantante, infatti, è appena tornato dal Messico, dove è approdato come nuovo nome italiano da esportazione con il cd Mi Voz, un disco in lingua spagnola che contiene alcune delle migliori canzoni del repertorio made in Italy, da Almeno tu nell'universo a Io che non vivo, passando per Il mondo.</descrizione>
+	    <idautore>3</idautore>
+	    <data>2014-04-16</data>
+	    <tag>16</tag><tag>0</tag>
+	    <intervistato>Francesco Renga</intervistato>
+	    <galleria>1</galleria>
+	</intervista>
+	<intervista id="i2">
+	    <titolo>Lo Zoo di 105, intervista a Pippo Palmieri e Dj Spyne</titolo>
+	    <foto>
+		<src>/img/interviste/197259-400-629-1-100-Lo-zoo-di-105.jpg</src>
+		<alt>Il-team-dello-zoo-di-105-al-completo</alt>
+	    </foto>
+	    <excerpt>Alzi la mano chi non ha mai ascoltato Lo Zoo di 105? Bene, allora siete capitati nel posto giusto.</excerpt>
+	    <descrizione>Alzi la mano chi non ha mai ascoltato Lo Zoo di 105? Bene, allora siete capitati nel posto giusto, perché noi di DaringToDo non solo vi raccontiamo lo Zoo di 105, ma vi facciamo immergere direttamente nell’incredibile mondo di irriverenza, di allegria contagiosa e di simpatia che soltanto quelli di Radio 105 sono in grado di regalare.Grazie alla disponibilità di Pippo Palmieri e Dj Spyne, responsabili della regia dello Zoo di 105, siamo riusciti ad entrare dalla porta d’ingresso di quello che è un vero e proprio mondo, un fenomeno di tendenza, un modus vivendi e se pensate che le nostre parole siano esagerate, vi state sbagliando di grosso.Lo Zoo di 105, in onda dal lunedì al venerdì dalle 14:00 alle 16:00, nasce quindici anni fa e nel corso del tempo ha modificato il suo assetto e la sua formazione, restando comunque un punto di riferimento per tutti gli ascoltatori che, nonostante le mille e una polemiche nate proprio dall’irriverenza dello Zoo, non hanno mai cessato di dimostrare calore, affetto e soprattutto partecipazione (i social network ufficiali del programma sono la dimostrazione) a Palmieri e soci.Lo Zoo di 105 ha uno slogan “Il programma che non piace”, che ormai suona quasi come un rito scaramantico, visto che comunque riesce a fare incetta di premi – il programma ha vinto le Radio Grolle nel 2007 come miglior trasmissione radiofonica del pomeriggio e le Cuffie d’Oro nel 2013 come miglior programma comico – e di consensi, nonostante nel corso degli anni le polemiche che lo hanno accompagnato non siano state esattamente leggere.Insomma, Lo Zoo di 105 merita un posto speciale nel vostro cuore e dopo quest’intervista siamo sicuri che lo avrà, perché Pippo Palmieri e Dj Spyne hanno dimostrato quanto l’unione faccia realmente la forza, quanto essere allegri, scanzonati e irriverenti non sia un’arte di tutti e quanto il lavoro, se fatto bene, sia capace di ripagare ogni sforzo e capace di convincere il pubblico.Pippo Palmieri e Dj Spyne si sono raccontati e hanno raccontato i quindici anni dello Z00 di 105, hanno descritto i radioascoltatori, hanno sottolineato l’importantissimo posto che la musica ha nella vita di tutti e non si sono tirati indietro di fronte a niente, guardare per credere:</descrizione>
+	    <idautore>2</idautore>
+	    <data>2014-06-27</data>
+	    <tag>20</tag>
+	    <intervistato>Pippo Palmieri e Dj Spyne</intervistato>
+	    <galleria>2</galleria>
+	</intervista>
+	<intervista id="i3">
+	    <titolo> Eddie Vedder -Vi racconto i <span lang="en">Pearl Jam</span>-</titolo>
+	    <foto>
+		<src>/img/interviste/3643687560.jpg</src>
+		<alt>Eddie-Vedder-al-microfono</alt>
+	    </foto>
+	    <excerpt>**Ogni volta che fai un nuovo disco e' come ricaricare il fucile**, dice Eddie Vedder al telefono da casa sua a Seattle con la sua inconfondibile voce profonda.</excerpt>
+	    <descrizione>**Ogni volta che fai un nuovo disco è come ricaricare il fucile**, dice Eddie Vedder al telefono da casa sua a Seattle con la sua inconfondibile voce profonda.«È come stare dinanzi ad una lavagna pulita. I dischi sono come i figli, ognuno ha la sua personalità. Sono sempre diversi anche se i genitori sono gli stessi. E i genitori fanno il possibile per farli venire su bene» Eddie sta parlando del decimo album dei Pearl Jam, Lightining Bolt, che è una conferma del livello raggiunto dalla band nel campo del rock.Quattro anni dopo Backspacer, Lightining Bolt ha consentito alla band di arrivare al primo posto della classifica di Billboard negli Usa e al secondo nel Regno Unito superando Sir Paul McCartney e raggiungendo la posizione più alta nella hit parade dopo quella di Vs, l’album del 1993.Nell’unica intervista rilasciata ad un giornale britannico, Vedder appare pensoso. «L’album n. 10!», commenta con un lungo sospiro. «Cosa abbiamo imparato? In che modo siamo cambiati? Ce la stiamo prendendo comoda di questi tempi”, dice ridendo. «Non facciamo molte prove e quando ci esibiamo in pubblico, lo facciamo solo per grossi concerti. In questo senso siamo veramente cambiati».In che misura influisce su di voi sapere che quando lavorate ad un disco, i pezzi verranno ascoltati da milioni di persone? «Bella domanda», risponde Vedder. «Bisogna proteggere l’anima di una canzone. Non ci si deve fare influenzare da considerazioni come questa. Quando si scrive un pezzo non è necessario pensare alle radio commerciali perché il solo pensarci sciupa la purezza del brano. Qualche volta viene fuori una canzone che non è di facile ascolto. Suonarla è bello ed è una sfida, ascoltarla è più difficile. Mentre la scrivi sai benissimo che quel pezzo verrà suonato solamente due o tre volte durante il tour. Quando componi non devi mai pensare che vuoi scrivere una canzone che verrà suonata più spesso perché in questo modo corri il rischio della semplificazione».Lightning Bolt è un album nel quale i Pearl Jam in un certo senso si interrogano, si fanno delle domande. «Quando compongo, quando scrivo i testi cerco sempre di trovare le risposte agli stessi misteri», risponde Vedder. «Sono gli stessi misteri che ci tormentano da decenni. A volte ci interroghiamo sulla nostra esistenza, sullo scopo della vita e su cosa ci riserva il futuro».Nel nuovo singolo Sirens Vedder canta: «Oh, che cosa fragile questa vita che viviamo; se penso troppo non ce la faccio». E nella canzone che apre l’album, Getaway, il testo recita: «Ho trovato il mio posto e va bene. Ho trovato il mio modo per credere».Battaglia impari Vedder, papà di due bambine, spiega: «Quando diventi padre ti preoccupi di più. A me è successo. Questo sarà il loro mondo e che futuro le aspetta? Non ci sono abbastanza persone che difendono la natura. Le risorse del pianeta sono limitate. La gente sfrutta e spreca le risorse del pianeta senza alcun controllo e tra le multinazionali e la natura la battaglia è impari. Tutto il potere è dalla parte delle multinazionali. Possono fare quello che vogliono. Non le ferma nessuno. Possiamo solamente rallentare la discesa verso il baratro. La scienza ci dice che entro i prossimi 50 anni, se non staremo attenti, finiremo per perdere molte cose”.Con il brano Mind Your Manners, Vedder affronta il tema dell’ipocrisia delle religioni organizzate. «Non tollero la loro intolleranza», spiega con decisione. «Solo in questo sono intollerante. Detesto il loro ricatto “o con noi o all’inferno”. Per capire quanto sono ipocriti basta guardare alcune delle belle cose che hanno partorito come gli abusi sessuali nei confronti dei minori e i loro patetici tentativi di insabbiare gli scandali. Non ho mai visto in vita mia una forma così vigliacca di ipocrisia».Nell’album trova posto anche Swallowed Whole, una canzone scritta da Vedder, appassionato di surfing, una sera che si era uscito in mare con la tavola. «C’era la luna piena e non avevo mai visto l’oceano così calmo», ricorda. «Mi sentivo lontano dal mondo, era mezzanotte e dovevo fare qualcosa. Così sono 
+uscito in mare con la tavola e ho pagaiato per due ore per raggiungere le onde. Le onde si infrangono a circa mezzo chilometro dalla costa e a mano a mano che ti avvicini diventano sempre più enormi e il rumore diventa minaccioso, spaventoso. Dalla riva non riesci mai a capire quanto sono grandi. È stata una esperienza tremendamente intensa. Ti senti i nervi a fior di pelle. I sensi sono estremamente vigili. È stupendo, ma sei solo e sai che è anche pericoloso. Quella canzone è stata partorita dalla notte e ascoltandola si ha proprio la sensazione di correre nel fitto di un bosco e poi di spuntare in una radura, all’aperto. Uscire in mare per me è una forma di liberazione. Oggi è ancor più bello perché puoi surfare con le cuffie e con la musica tutto diventa più bello. L’acqua e il surfing fanno lo stesso effetto della meditazione. Quando cavalchi un’onda devi essere concentrato al massimo e pensare solo a quello che stai facendo».Vedder è il leader, ma i Pearl Jam ( il chitarrista Stone Grossard, il bassista Jeff Ament, il chitarrista Mike McCready e il batterista Matt Cameron) sono una band di amici e un gruppo molto democratico. «Questo album è frutto della nostra collaborazione. Tutti noi del gruppo e il nostro produttore Brendan O’Brien stiamo sulla stessa barca», dice Eddie. «Eravamo tutti un po’ sconcertati e non sapevamo cosa sarebbe venuto fuori fin quando abbiamo cominciato a mixare i pezzi. Abbiamo lavorato in due sale diverse e non potevamo essere certi del risultato. Quindi in un certo senso non ci sono state decisioni difficili o contrastate. Nessuno ha avuto motivo di protestare. Eravamo tutti molto rilassati. Le cose migliori vengono fuori quando senti che quello che stai facendo è importante e che sei disposto a batterti per ottenere il risultato che ti aspetti».Tutti i membri della band in questi ultimi anni si sono presi la libertà di realizzare progetti al di fuori del loro gruppo. Vedder l’estate scorsa ha fatto il primo tour da solo in Gran Bretagna. «Una certa attività da solista contribuisce e rendere professionalmente più longevi», dice il frontman. «È un po’ come un matrimonio aperto che fa bene a tutti. In parte ho accettato di fare dei concerti da solista per migliorarmi professionalmente riversando poi le mie esperienze nella band»I Pearl Jam non sapevano proprio cosa fosse la fama quando debuttarono nel 1991 con il primo album Ten che vendette 12 milioni di copie. Per loro al primo posto c’è sempre stata l’integrità e non sono mai stati disposti ai compromessi. «Per noi contano solo la musica e i fan», dice Vedder.«È per questo che siamo ancora qui, siamo felici e produciamo album. Ricordo benissimo che effetto faceva quando sapevamo che stava per uscire un nuovo album degli Who. Mi auguro che il nostro pubblico provi la stessa emozione con i Pearl Jam. Ho incontrato molti giganti della musica e siamo diventati amici. Sono grato della loro amicizia e dell’appoggio che mi hanno dato. Dopo quanto accadde a Roskilde ( il Festival del 2000 in Danimarca quando morirono nove fan dei Pearl Jam, Ndt), amici come Roger Daltrey mi sono stati vicini in un momento in cui non avevo nessuno a cui rivolgermi. Noi della band ci siamo sostenuti gli uni con gli altri, ma eravamo distrutti. L’appoggio di certe persone ha voluto dire molto per me. Provo una estrema gratitudine per tutti loro».La tempesta nello stadio. Nel luglio scorso siamo stati ospiti speciali dell’evento Una serata con i Pearl Jam al Wrigley Field, lo stadio dove giocano i Chicago Cubs, la squadra di baseball per cui Vedder fa il tifo. A metà del concerto sia la band che gli spettatori sono stati costretti a trovare un riparo a causa di un vero e proprio nubifragio con lampi e tuoni, un battesimo quanto mai adatto per un album che si intitola Lightining Bolt (fulmine).Il concerto è stato sospeso per due ore. E quando i Pearl Jam sono tornati sul palco hanno suonato in maniera magica. «Di quella sera non ricordo un accidenti perché ero troppo stressato», ride Vedder. «Ci avevano avvertito che poteva scoppiare un temporale ed eravamo tutti 
+un po’ tesi. Speravamo solo che nessuno si facesse male e per fortuna così è stato. Poi siamo tornati sul palco, ma non ricordo cosa abbiamo suonato. Qualcuno non molto tempo fa mi ha mostrato la lista dei pezzi eseguiti e io ho detto: “Non ricordo affatto di aver suonato queste canzoni”. Dovevo essere pieno di adrenalina. Mi hanno anche detto che mi sono tuffato sul palco. Mi fa piacere sapere che è stata una cosa memorabile, quanto meno per il pubblico».E il futuro cos’è per Eddie Vedder? «Nel mondo in cui viviamo con tutti i social media che ci sono, sembriamo sempre alla caccia di qualcosa che non ha niente a che vedere con il presente. E quando finalmente arriviamo dove volevamo arrivare, non possiamo nemmeno gioirne perché dobbiamo metterci immediatamente in movimento per raggiungere un altro posto. Mi ricorda la storiella di un uomo anziano che andava spesso in una libreria e ne usciva con venti libri. Voleva soltanto provare a credere che avrebbe avuto il tempo di leggerli. Non so quanto possiamo spingere il nostro sguardo nel futuro. Godiamoci il presente che per i Pearl Jam non è niente male».</descrizione>
+	    <idautore>1</idautore>
+	    <data>2014-06-27</data>
+	    <tag>24</tag>
+	    <tag>23</tag>
+	    <intervistato>Eddie Vedder</intervistato>
+	    <galleria>3</galleria>
+	</intervista>
+    <intervista id="i4">
+			<titolo>Caparezza, Museica: E un disco piu vicino agli AC/DC che al rap</titolo>
+			<foto>
+			<src>/img/interviste/photoposti4.jpg</src>
+			<alt>caparezza-durante-la-intervista</alt>
+			</foto>
+			<excerpt>Il musicista presenta il nuovo album, fra suggestioni pittoriche, musei, e la richiesta di ascoltare Museica un paio di volte, per apprezzarlo...</excerpt>
+			<descrizione>Museica, nel suo titolo, contiene in sè la musica, il concetto di museo, ed il numero sei, ad indicare il sesto disco di Caparezza.
+Ogni brano di Museica trae ispirazione da un'opera d'arte: da Ligabue (Antonio) a Dalì, passando da Goya, Van Gogh e Duchamp. Ed è per questo che, con un guizzo di genio, la conferenza di presentazione del disco avviene in una galleria d'arte, il Museo Fondazione Luciana Matalon: all'ingresso viene fornita una audio-guida e ci si incammina nella galleria, dove sono esposte le copie di tutti i quadri che hanno ispirato le nuove canzoni - sono 19 in tutto, una collezione corposa, e ad ogni fermata l'audio-guida ci parla del brano e ce lo fa ascoltare. Un modo nuovo ed interessante per fruire la musica, e speriamo venga studiata una modalità di ascolto simile, per quando Museica arriverà nei negozi il 22 Aprile.
+Tantissimi stili diversi scorrono davanti agli occhi e tanti approfondimenti nelle orecchie: dalla cover di un cartone animato giapponese (Ge ge ge no Kitaro) alla complicata e ridicola vicenda delle Teste di Modì, passando da Saturno Che Divora I Suoi Figli ad interpretare il brano "Figli D'Arte" e la banana di Andy Warhol per le Cover. Su tutto, con dimensioni enormi, il Quarto Stato di Giuseppe Pellizza Da Volpedo: Troppo Politico.</descrizione>
+			<idautore>0</idautore>
+			<data>2014-7-3</data>
+			<tag>30</tag>
+			<intervistato>Caparezza</intervistato>
+			<galleria>4</galleria>
+			</intervista><intervista id="i5">
+			<titolo>Ligabue presenta Mondovisione: "Ho dato Voce all'amarezza"</titolo>
+			<foto>
+			<src>/img/interviste/photoposti5.jpg</src>
+			<alt>primo piano di Luciano Ligabue</alt>
+			</foto>
+			<excerpt>Abbiamo intervistato luciano Ligabue all'uscita del suo decimo disco in Studio.</excerpt>
+			<descrizione>Dopo essersi sposato in gran segreto, si e' anche tagliato i capelli. 
+Ha dichiarato "Questo album non parla di negativita', ma vuole dare sfogo ad uno sfinimento", spiega, "a volte sono vago e voglio restare lontano dalla cronaca perche' invecchia le canzoni, ma questa volta non ce l'ho proprio fatta".
+Con questo album, distribuito da 
+"Warner" e "Zoo Digital" abbiamo visto un Luciano Ligabue molto cambiato, che vuole esprimere con canzoni dalle parole forti la sua amarezza e delusione dulla situazione attuale dello stato in cui vive.</descrizione>
+			<idautore>0</idautore>
+			<data>2014-7-3</data>
+			<tag>31</tag><tag>32</tag>
+			<intervistato>Luciano Ligabue</intervistato>
+			<galleria>5</galleria>
+			</intervista><intervista id="i6">
+			<titolo>Intervista ai Moda'</titolo>
+			<foto>
+			<src>/img/interviste/photoposti6.jpg</src>
+			<alt>gruppo Moda'</alt>
+			</foto>
+			<excerpt>I Modà hanno inaugurato la chiacchierata con Paola "Funky" Gallo, in onda su Radio Italia.</excerpt>
+			<descrizione>I Modà hanno inaugurato la chiacchierata con Paola "Funky" Gallo, in onda in contemporanea su Radio Italia, Radio Italia Tv e radioitalia.it, con un mazzo di mimose. Sulla festa dell'8 marzo, Kekko ha raccontato: "La mia prima donna è stata mia madre. Se non ci fossero le donne, non avremmo un obbiettivo. Viviamo per condividere con loro tutto quello che facciamo". E sul "Gioia Tour", affiancato da Radio Italia, il cantante ha svelato: "Abbiamo rifiutato San Siro: all'inizio dovevamo fare 2 live al Forum di Milano, che poi sono diventati 5 e i primi 3 sono già sold out. Siamo contentissimi così: San Siro 'arriverà'...".
+Ecco il video backstage dell'intervista.</descrizione>
+			<idautore>0</idautore>
+			<data>2014-7-3</data>
+			<tag>33</tag><tag>34</tag>
+			<intervistato>Moda'</intervistato>
+			<galleria>6</galleria>
+			</intervista><intervista id="i7">
+			<titolo>Intervista a Suor Cristina finalista di The Voice: «Il mio futuro? Lo affido alla Provvidenza»</titolo>
+			<foto>
+			<src>/img/interviste/photoposti7.jpg</src>
+			<alt>foto di suor cristina</alt>
+			</foto>
+			<excerpt>Lo ammette candidamente, suor Cristina: «Con i miei superiori non avevamo preventivato una eco così grande».</excerpt>
+			<descrizione>Lo ammette candidamente, suor Cristina: «Con i miei superiori non avevamo preventivato una eco così grande». Di certo non di essere oggetto di discussione persino su quotidiani e tv statunitensi. Ma l’abito da orsolina (e la sua voce unica), non c’è dubbio, ha bucato lo schermo. E probabilmente questa era, quando su Raidue andrà in scena la finale di The Voice, non sarà l’ultima volta. Che vinca o meno, questo è chiaro. Ma oggi, durante la conferenza stampa dei quattro concorrenti che si contenderanno il titolo della seconda edizione (con suor Cristina Scuccia ci sono Giorgia Pino, Tommaso Pini e Giacomo Voli), la giovane religiosa ha ribadito la sua noncuranza nei confronti di quel che sarà. «C’è un passo del Vangelo in cui si dice che ogni cosa si faccia, lo sia per la gloria di Dio. Come gestirò gli eventuali rapporti con la casa discografica? Ho i miei superiori alle spalle, io direttamente non gestirò nulla, saranno loro a farlo. E poi valuteremo se e quando sarà il momento. Ogni scelta sarà fatta con le mie consorelle. Per ora preferisco stare con i piedi per terra e lo sguardo al cielo, con leggerezza e spensieratezza. Vivo il momento presente, il futuro lo affido alla Provvidenza». E su una cosa è chiara: «Se i miei superiori dovessero dire di no, sarò felicissima di tornare tra i bambini in oratorio. E non rinuncerò per nessun motivo alla mia chiamata. Anche perché non smetterò di cantare. Canterò ovunque il Signore vorrà: in chiesa, a scuola, nelle piazze».</descrizione>
+			<idautore>0</idautore>
+			<data>2014-7-3</data>
+			<tag>35</tag>
+			<intervistato>Suor Cristina</intervistato>
+			<galleria>7</galleria>
+			</intervista></interviste>
     
     <!-- NEWS -->
     <news>
@@ -192,42 +402,87 @@ PIERONI --&gt; Soul/Motown/RB</descrizione>
             <titolo>Richard Benson uno Svitato!</titolo>
             <foto>
                 <src>/img/news/richardbenson.jpg</src>
-                <alt>descrizione della foto</alt>
+                <alt>descrizione-della-foto</alt>
             </foto>
             <excerpt>Per tastare il polso alla giovane scena rock ravennate abbiamo fatto una chiacchierata con due componenti del quartetto ravennate Actionmen, Matteo Pozzi e Diego Pasini, rispettivamente chitarra/voce e basso di una band completata da Ram Das Libero Foschi (chitarra e voce) e Mattia “Pinna” De Paoli (batteria).Per chi non li conoscesse, gli Actionmen sono un gruppo che suona principalmente pezzi punk-rock e sono conosciuti anche all'estero. Il loro debutto – l'album The Game (2005) pubblicato da Unicorn Records – gli ha dato l'opportunità di emergere e farsi conoscere da un pubblico eterogeneo.</excerpt>
-            <descrizione>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
-            </descrizione>
+            <descrizione>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.</descrizione>
             <idautore>4</idautore>
             <data>2014-01-20</data>
-			<tag>1</tag>
+	    <tag>1</tag>
         </item>
-    <item id="n1">
-			<titolo>Sanremo 2014, un mese dopo: i risultati in classifica e nelle radio. Ahi ahi...</titolo>
-			<foto>
-			<src>/img/news/Sanremo_2014_logo.jpg</src>
-			<alt>Logo di Sanremo</alt>
-			</foto>
-			<excerpt>Nei giorni del Festival di Sanremo Rockol ha pubblicato, serata dopo serata, un mio commento “a caldo” su quanto si era sentito in TV. Mi è stato fatto notare, e rimproverato, che dopo la serata di sabato</excerpt>
-			<descrizione>Il Festival di Sanremo 2014, dal punto di vista delle canzoni (che è quello che importa a Rockol) non è stato certamente indimenticabile. Non è stato nemmeno fra i peggiori che io ricordi, certo. Ma tutto sommato mi pare di poter dire che mediamente le canzoni che abbiamo ascoltato si sono collocate sopra la sufficienza. Quasi ovvio, data l’autorevolezza della direzione artistica di Mauro Pagani. Per sapere se Pagani e i suoi hanno scelto davvero bene bisognerebbe poter ascoltare anche le canzoni scartate e non ammesse al Festival – e non sono in grado di farlo. Dò per scontato che le scelte siano state fatte seguendo un criterio di qualità, per come “qualità” è stato inteso dalla direzione artistica (sarebbe invece tutto da discutere il criterio della “contemporaneità”, sbandierato in conferenza stampa e del quale non mi pare di aver trovato riscontri effettivi nelle canzoni). Quindi, per la stima che ho nei confronti di Pagani, voglio anche credere che la presenza di Raphael Gualazzi sia stata frutto solo ed esclusivamente di una scelta di qualità, e che il fatto che Gualazzi sia un collaboratore fisso della trasmissione “Che tempo che fa”, condotta dallo stesso conduttore del Festival, Fabio Fazio, non abbia pesato minimamente sulla valutazione di Pagani e C. (voglio crederlo: ma mi riesce difficile, lo capite anche voi). Sarebbe stato più elegante evitare questo piccolo conflitto di interesse? Sì, certo. Ma tant’è... A Fazio si tende a perdonare molto: se lo stesso favoritismo (chiamiamolo con il suo nome) fosse stato perpetrato da altri, le anime belle della stampa si sarebbero strappate le vesti. Quel che comunque non c’era, fra le canzoni di Sanremo 2014, era la canzone innegabilmente superiore alla media, quella destinata a diventare, se non un evergreen, almeno un grande successo. Non c’era però nemmeno la canzone decisamente brutta, quella da buttar via o da trasformare in fenomeno trash. Da qui, da questa uniformità, è derivata forse anche la sensazione di tedio (nobile, ma pur sempre tedio) che ha avvolto la manifestazione. </descrizione>
-			<idautore>2</idautore>
-			<data>2014-3-24</data>
-			<tag>7</tag>
-			</item><item id="n2">
-			<titolo>I Metallica condividono il demo di 'Lords of summer'</titolo>
-			<foto>
-			<src>/img/news/MetallicaLive10.jpg</src>
-			<alt>James che suona la chitarra</alt>
-			</foto>
-			<excerpt>Dopo aver eseguito il nuovo brano "Lords of summer" per la prima volta dal vivo, domenica 16 marzo, i Metallica hanno ovviamente visto i fan scatenarsi online con spezzoni e video completi del brano live</excerpt>
-			<descrizione>Il nuovo disco dei <ciao>Four Horsemen</ciao> al momento non ha ancora una tabella di marcia, nel senso che non Ã¨ dato sapere quando la band entrerà effettivamente in studio e quando intende pubblicare il nuovo lavoro. Si tratterebbe comunque del decimo disco dei Metallica.
-Inoltre non è automatico che "Lords of summer" venga utilizzata per il disco in questa forma; anzi, recentemente Lars Ulrich, parlando con Rolling Stone USA, ha chiaramente detto che potrebbe non accadere, come giÃ  sperimentato in occasione di "Death magnetic": all'epoca la band, live, suonava in anteprima due canzoni - "New song 1" e "New song 2". "New song 2" non Ã¨ stata usata, mentre la parte centrale di "New song 1" Ã¨ finita in "All nightmare long" e l'intro in "The end of the line". "Noi lavoriamo cosÃ¬", ha detto Ulrich, "le cose vengono modificate, spostate. Questo va qui, quello va lÃ , il resto lo scartiamo e l'intro lo usiamo per la quinta canzone!". </descrizione>
-			<idautore>2</idautore>
-			<data>2014-3-24</data>
-			<tag>8</tag>
-			</item></news>   
+	<item id="n2">
+	    <titolo>I Metallica condividono il demo di 'Lords of summer'</titolo>
+	    <foto>
+		<src>/img/news/MetallicaLive10.jpg</src>
+		<alt>James-che-suona-la-chitarra</alt>
+	    </foto>
+	    <excerpt>Dopo aver eseguito il nuovo brano "Lords of summer" per la prima volta dal vivo, domenica 16 marzo, i Metallica hanno ovviamente visto i fan scatenarsi online con spezzoni e video completi del brano live</excerpt>
+	    <descrizione>Il nuovo disco dei <span lang="en">Four Horsemen</span> al momento non ha ancora una tabella di marcia, nel senso che non è dato sapere quando la band entrerà effettivamente in studio e quando intende pubblicare il nuovo lavoro. Si tratterebbe comunque del decimo disco dei Metallica.Inoltre non è automatico che "Lords of summer" venga utilizzata per il disco in questa forma; anzi, recentemente Lars Ulrich, parlando con Rolling Stone USA, ha chiaramente detto che potrebbe non accadere, come giÃ  sperimentato in occasione di "Death magnetic": all'epoca la band, live, suonava in anteprima due canzoni - "New song 1" e "New song 2". "New song 2" non è stata usata, mentre la parte centrale di "New song 1" è finita in "All nightmare long" e l'intro in "The end of the line". "Noi lavoriamo così, ha detto Ulrich, "le cose vengono modificate, spostate. Questo va qui, quello va là , il resto lo scartiamo e l'intro lo usiamo per la quinta canzone!". </descrizione>
+	    <idautore>2</idautore>
+	    <data>2014-03-24</data>
+	    <tag>8</tag>
+	</item>
+	<item id="n3">
+	    <titolo>Tool, il nuovo album “finito al 100%”</titolo>
+	    <foto>
+		<src>/img/news/060523_cim.jpg</src>
+		<alt>La band Tool al completo</alt>
+	    </foto>
+	    <excerpt>La notizia più bella per i fan della band di Maynard James Keenan, che intanto si prepara a festeggiare i suoi primi 50 anni con un evento dal vivo</excerpt>
+	    <descrizione>Non ce la faranno a uscire “nella prima parte del 2014″, come speravano lo scorso autunno, ma di sicuro è conclusa la registrazione del nuovo disco dei Tool, che era in lavorazione da diversi mesi a causa degli impegni multipli del frontman Maynard James Keenan. Lo ha confermato al sito Crave Online il chitarrista Adam Jones, specificando che una data di uscita non è decisa ma che il lavoro potrebbe arrivare nella seconda metà dell’anno, e che la lavorazione è completata al 100%.A proposito di Maynard, il 10 maggio il cantante festeggerà i propri primi 50 anni con i Tool ma solo fra il pubblico di un evento dal vivo che lo vedrà come protagonista su un palco sia alla testa degli A Perfect Circle che dei Puscifer: un concerto di compleanno, insomma, al Greek Theatre di Los Angeles. Aperto a tutti (in teoria… i biglietti sono già esauriti!).</descrizione>
+	    <idautore>4</idautore>
+	    <data>2014-04-16</data>
+	    <tag>14</tag>
+	    <tag>15</tag>
+	</item>
+	<item id="n4">
+	    <titolo>B.B. King si scusa per il concerto disastroso di St Louis</titolo>
+	    <foto>
+		<src>/img/news/bbking39.jpg</src>
+		<alt>BBKing-al-microfono</alt>
+	    </foto>
+	    <excerpt>Anche i grandi hanno le loro serate no. E a B.B. King ne è capitata una davvero storta, lo scorso 4 aprile, quando si è esibito</excerpt>
+	    <descrizione>Anche i grandi hanno le loro serate no. E a B.B. King ne è capitata una davvero storta, lo scorso 4 aprile, quando si è esibito - o meglio, ha tentato di esibirsi - alla Peabody Opera House di St. Louis; purtroppo il leggendario bluesman non riusciva a suonare e - stando a quanto riportato dal "St Louis Post-Dispatch" ha proposto solo "Rock Me Baby", poi una versione di 15 minuti di "You Are My Sunshine", durante cui B.B. parlava col pubblico e salutava. Alla fine di questo brano molti degli spettatori avevano già lasciato il locale e B.B. si è congedato suonando altri tre brani in maniera approssimativa.Ora è giunto un documento ufficiale di scuse, tramite un portavoce di B.B. King, che ha spiegato come l'accaduto sia da imputare al fatto che il musicista, quella sera, aveva dimenticato di prendere le sue medicine. "Mr. King soffre di diabete", spiega il portavoce, "e per errore ha dimenticato di assumere una dose delle sue medicine proprio il giorno del concerto. Per farla breve, è stata una serataccia per una delle leggende viventi del blues americano e Mr. King si scusa e chiede umilmente ai suoi fan di comprenderlo".B.B. King avrà 89 anni il prossimo 16 settembre e ancora si esibisce dal vivo ed è stato stimato che negli ultimi 64 anni abbia tenuto più di 15.000 concerti. </descrizione>
+	    <idautore>0</idautore>
+	    <data>2014-04-16</data>
+	    <tag>17</tag>
+	</item><item id="n5">
+	    <titolo>Uscito-ultimo-album-peppa-pig</titolo>
+	    <foto>
+		<src>/img/news/704794_peppa_pig.jpg</src>
+		<alt>disegno peppa pig</alt>
+	    </foto>
+	    <excerpt>Fusce sed lacus mattis, suscipit nunc ac, gravida mauris. Donec libero eros, laoreet vel nulla id, hendrerit dignissim est. Nulla at semper nibh, in lobortis lorem. Nam bibendum aliquam ligula sed malesuada.</excerpt>
+	    <descrizione>Praesent condimentum, ipsum a laoreet dapibus, nisl nisi sagittis mi, at dictum libero nisl ut urna. Praesent imperdiet nisl scelerisque, rutrum nisi sed, ultricies nisi. Donec ut sapien id augue tincidunt euismod. Quisque vehicula in mauris sed euismod. Aenean ac vehicula quam, et accumsan arcu. Etiam consectetur neque non leo posuere, in fringilla sem ultrices. Donec venenatis enim odio, eget eleifend massa ultrices sit amet. Vivamus viverra neque mauris, quis placerat ante dictum vel. Aliquam quam odio, volutpat a magna vitae, iaculis fringilla enim. Proin fermentum quam sed diam vestibulum, cursus vulputate sapien ultricies. Maecenas id lacinia neque. Ut in pulvinar odio. Phasellus quam risus, elementum vel blandit quis, pellentesque ut nisi. Curabitur vehicula vehicula magna, ut viverra orci. Mauris neque nunc, pharetra ut pharetra ut, egestas quis elit. Fusce sodales molestie felis et vehicula. In rutrum diam tortor. Duis leo leo, lobortis id tortor sed, egestas egestas dolor. Mauris id tincidunt ligula. Nulla non velit suscipit, mollis urna non, lobortis metus. Nam eleifend nunc in adipiscing sodales. Nunc commodo quam a nulla consequat tincidunt. Pellentesque cursus pharetra mi tincidunt laoreet. Cras id neque diam. Maecenas pretium tortor in viverra interdum. Curabitur nisl lacus, pulvinar id nisi ac, pellentesque molestie massa. Donec sed vehicula eros. Cras eu sodales justo, non hendrerit risus. Suspendisse in purus et risus volutpat ornare ac non odio.</descrizione>
+	    <idautore>0</idautore>
+	    <data>2014-05-27</data>
+	    <tag>18</tag>
+	</item>
+	<item id="n6">
+	    <titolo><span lang="en">Pearl Jam</span>, il ritorno con <span lang="en">‘Lightning Bolt’</span></titolo>
+	    <foto>
+		<src>/img/news/lightningbolt-608x608-e1382196184291.png</src>
+		<alt>Copertina-album-Lightning-Bolt</alt>
+	    </foto>
+	    <excerpt>Sembrano essere trascorsi secoli e invece è solo un ventennio fa che i Pearl Jam si accingevano, controvoglia, a varcare la soglia di un enorme successo, fino a diventare quello che sono oggi</excerpt>
+	    <descrizione>Sembrano essere trascorsi secoli e invece è solo un ventennio fa che i Pearl Jam si accingevano, controvoglia, a varcare la soglia di un enorme successo, fino a diventare quello che sono oggi: dei “sopravvissuti” al rock, ma dalla passione immutata. Eppure, smaltita la sbornia da festeggiamenti per il ventennale, mai la band guidata da un uomo minuto come Eddie Vedder, la cui timidezza l’ha sempre portato ad avere un atteggiamento di basso profilo, avrebbe immaginato quel che le è capitato durante tutti questi anni. Ma sembrano oramai averci fatto il callo, se non addirittura averci preso gusto. Come si spiegherebbe sennò tutto quel sensazionalismo che si è andato via via creando attorno a questo nuovo disco uscito lo scorso 15 ottobre?Si intitola Lightning Bolt il nuovo album, il decimo della loro carriera, e la prima cosa che colpisce è il titolo: mai prima d’ora era stato scelto riprendendo quello di una canzone in scaletta. Può esser considerata una minuzia, ma rappresenta un piccolo cambiamento, che si aggiunge ai tanti vissuti dalla band per via dell’età, dell’esperienza e dall’essere diventati mainstream. Una nota di merito va all’artwork del disco, da cui si evince l’occhio di riguardo che i Pearl Jam hanno sempre avuto nei confronti dell’arte, curato da Don Pendleton in collaborazione col bassista Jeff Ament, a cui in passato aveva disegnato la cover per il suo album solista di While My Heart Beats. Per ogni brano è stata ideata un’immagine che ne riassume il messaggio, in modo lampante, facendo pensare che ci si trovi dinanzi a un concept album. Per la copertina, però, si poteva fare di più, avendo optato più per il valore simbolico che estetico.Composto da dodici canzoni, le cui sonorità non si discostano di molto da quel genere, il Grunge, che oggi appare più come una parola svuotata di significato, una piccola delusione può arrecarla a chi, ascoltando le parole pronunciate dal chitarrista Mike McCready a pochi giorni dall’uscita di  Lightning Bolt (“sarà un disco à la Pink Floyd”), aveva sperato in una nuova fase, magari più sperimentale, della band, piuttosto che produrre un disco che suona “più alla Eddie Vedder”. Come si spiega altrimenti la presenza di un brano “rivisitato”  come Sleeping by Myself, estrapolato dal disco solista del cantante Ukulele Songs?Chi ha assistito dal vivo alle ultime performance della band, non ha potuto non far caso a come, sempre più, Vedder occupi maggiormente la scena, con le sue mosse da rocker riprese qua e là dai grandi del passato, quando un tempo, invece, s’arrampicava su pali, sostegni e telecamere per lanciarsi sulla folla in visibilio (vedere la performance di Porch al Pink Pop Festival del ’92). Mentre gli altri membri della band a tratti appaiono come figuranti e che in certi frangenti, scompaiono addirittura dal palco. Come quando è il momento di Just Breath, canzone la cui bellezza è indiscutibile, ma un fan non può non restare di stucco quando, nell’occasione, il volume della voce viene aumentato a dismisura, come a dire: “Ecco finalmente il momento che tutti voi aspettavate…”, e tutti su coi cellulari e smarthphone a mo’ di accendini.Registrato agli Henson Recording Studios di Los Angeles, prodotto da Brendan O’Brien, la band ci ha lavorato per quattro lunghi anni: le aspettative erano tante, e così per il suo lancio hanno scelto di fare le cose in grande stile. Probabilmente esagerando, perché simili strategie sono più adatte ad artisti del calibro di Justin Bieber o Lady Gaga. Già nel mese di luglio, un countdown adatto a far salire nei fan in attesa la trepidazione, compariva sul loro sito ufficiale, indicando quanto tempo sarebbe trascorso dal lancio del nuovo singolo, Mind Your Manners, un pezzo punk rock, in classico stile PJ, che però a più d’un fan è apparso come una rivisitazione in chiave moderna, di Spin the Black Circle contenuta nel loro terzo album Vitalogy, datato 1994. Segno che anche loro, come già accaduto alle grandi band del passato come Rolling Stones o U2, arrivati a questo punto, sono costretti a cercare un compromesso, 
+sia con i fan di lunga data – dei veri e propri integralisti, conservatori e tradizionalisti, ma solo verso i PJ, s’intende– sia con i nuovi, cresciuti a dismisura da quando Vedder compose la colonna sonora per il film di Sean Penn Into the Wild e che sempre più iniziano ad apprezzare la loro musica e i valori che li hanno resi grandi. Non tutti, del resto, optano per una scelta radicale come capitato agli R.e.m.: sciogliersi e lasciare che ognuno prenda la propria strada.Sempre allo scopo di far salire l’eccitazione, il management a intervalli regolari ha lanciato in rete brevi videoclip, le celebri “Vignette” in cui, ogni componente della band dice la sua sul disco: nel primo, girato in bianco e nero, si vede il cantante concentratissimo dietro a una vecchia macchina da scrivere, tra gli scaffali di un magazzino, che picchia sui tasti: a ogni tasto corrisponde un accordo di chitarra. Sta componendo il riff iniziale di Mind Your Manners, e una volta terminato, in segno di vittoria alza la tastiera in aria come fosse un trofeo. Nel secondo, uscito in occasione del lancio del singolo intitolato Sirens – questo sì che ha tutti i connotati del singolone commerciale – il chitarrista Mike McCready accenna alcuni accordi con l’acustica mentre passeggia tra le rotaie di una ferrovia. In un altro, Stone Gossard è alle prese con fogli bianchi e gessetti neri, con cui scrive in vari caratteri la parola Pearl Jam. Nell’ultimo invece, sempre Eddie Vedder è alle prese con uno sport, molto in voga tra i boscaioli, il lancio dell’ascia.È in definitiva un disco che segna – e non poteva essere altrimenti – una nuova stagione per la band di Seattle, non più giovanissima, e i cui componenti sono quasi tutti padri di famiglia. Certo, le sorprese non mancano, come Infallible, brano scritto a quattro mani da Stone Gossard e Jeff Ament, il cui sound ha un gusto dal sapore vintage che a tratti sfocia nel funky, o Pendulum, Future Days e Yellow Moon, pezzi che sarebbero stati buoni per Into The Wild, e che non mancheranno di affascinare la nuova leva di fan. La blueseggiante Let The Records Play,invece, riecheggia un Neil Young d’antan: lo “Zio Neil” a cui il disco è dedicato. Il brano d’apertura, potente, Getaway mette subito le cose in chiaro, come a dire “tranquilli, nonostante tutto, siam sempre Noi”.Eddie dice di aver smesso di bere e di fumare – come del resto ha fatto lo Zio Neil, che da quando ha smesso di bere e fumare erba scrive libri per tenersi occupato (lo dice nella sua autobiografia Waging having peace) – di prendersi più cura di sé e del proprio corpo, e che le canzoni sono state scritte di notte, “quando ti sembra di essere l’unica persona sveglia per chilometri e chilometri. A quell’ora non c’è nessuno che critica quello che scrivi”. Neil Young, che i Pearl Jam considerano un esempio, alla loro età aveva pubblicato un disco come Harvest Moon. E del resto, il sentimentalismo in questo Lightning Bolt non manca: “Per tanti anni ho fatto giochi di parole per esprimere quelle emozioni – confessa Eddie Vedder in un’intervista a Rolling Stone – ma in modo tale da rimanere sempre criptico e misterioso. Suonare fa parte della vita di tutti noi. Ma è importante, per noi, essere parte delle nostre famiglie, essere dei padri presenti. E il fatto di pubblicare un disco in questo momento è un po’ una scossa che vogliamo dare all’intero sistema”.</descrizione>
+	    <idautore>1</idautore>
+	    <data>2014-06-27</data>
+	    <tag>23</tag>
+	</item>
+	<item id="n7">
+	    <titolo>Statistiche vendite CD</titolo>
+	    <foto>
+		<src>/img/news/photopostn7.jpg</src>
+		<alt>Immagine-CD</alt>
+	    </foto>
+	    <excerpt>Statistiche vendite CD 2014</excerpt>
+	    <descrizione>Ecco il link statistica delle vendite CD di quest'anno. <a href='../statistiche_album.html'>Statistiche vendite album 2014</a></descrizione>
+	    <idautore>1</idautore>
+	    <data>2014-06-27</data>
+	    <tag>1</tag>
+	</item>
+    </news>   
     </posts>
-
-      
 </root>

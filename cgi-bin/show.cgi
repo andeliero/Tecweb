@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use utf8;
 use XML::LibXSLT;
 use XML::LibXML;
 use CGI qw/:standard/;
@@ -13,7 +14,7 @@ my $path=CFUN::getpath();
 my $cgi = CGI->new();
 my $parser = XML::LibXML->new();
 my $DBpath = "../data/XML/DBsite.xml";
-my $source = XML::LibXML->load_xml(location => $DBpath);
+my $source = CFUN::getDB(); #XML::LibXML->load_xml(location => $DBpath);
 
 my $type = $cgi->param('type');
 my $pag = 1;
@@ -60,7 +61,7 @@ for (my $var = $ptrposts->size()-($pag*4); $var>0 && $var>($ptrposts->size()-(($
 
 #individio l'autore del post
 my $posts = $dom->findnodes("/posts/post");
-my $end=$posts->size()/4;
+my $end=$ptrposts->size()/4;
 foreach my $post ($posts->get_nodelist){
 	my $ptridautor = $post->findnodes('idautore')->get_node(1);
 	my $idautor = $ptridautor->textContent;
@@ -78,14 +79,20 @@ foreach my $post ($posts->get_nodelist){
 
 
 #stampo la pagina
-print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
-print CFUN::printHead("$title - Music Break","$title");
-print CFUN::printHeader();
-print CFUN::printNav($type);
-print "<div id='contents'>
-		<h1>$title</h1>
+print $cgi->header({-type=>'text/html', -charset=>'utf-8'});
+print CFUN::printHead("$title - Music Break","$title","/javascript/resources/jquery-2.1.1.min.js" ,"/javascript/screen.js");
+print CFUN::printHeader(1);
+print CFUN::printNav( $type );
+print "
+<div id='breadcrumb'>
+			<ul>
+				<li><a href='home.cgi'>Home &gt;&gt;</a></li>
+				<li>$title</li>
+			</ul>
+		</div>
+<div id='contents'>
 		<a class='help' href='#nav_pagine'>salta il contenuto</a>".
-		CFUN::printPosts($dom,$type).
-		"</div>";
+		CFUN::printPosts( $dom, $type).
+		"</div><div class='nav_help'><a href='#header'>torna su</a></div>";
 print CFUN::printNavPag($pag,$type,1,$end);
 print CFUN::printFooter();

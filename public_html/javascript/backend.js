@@ -1,19 +1,62 @@
 // BACKEND
 //-----FORM-----
 
-var def=new Array(),check=new Array();//def conterrà il valore di default dato come help,check contiene gli id degli elementi della form
+var def=new Array(),check=new Array();//def conterrà il valore di default dato come aiuto,check contiene gli id degli elementi della form
 //FUNZIONI ONLOAD
 
 function setArray(){//def è un array associativo del tipo def[id]="valore di default del placeholder"
 var a=document.getElementById("formfield");
 a=removeBlankspace(a);
+var b=a.lastChild.value;//prendo il valore del pulsante di submit per identificare la pagina
 a=a.getElementsByTagName("div");
 for(var i=0;i<a.length;++i)
 {
-	check[i]=a[i].firstChild.id;//non è inutile come può sembrare,mi serve nella funzione checkSubmit
-	def[a[i].firstChild.id]=a[i].firstChild.value;
+	check[i]=a[i].firstChild.id;//mi serve nella funzione checkSubmit
 }
+var c=b.replace(/\s/g,'');
+var str="set"+c;
+window[str]();//chiamo la funzione che setta i valori di default per gli aiuti
+if(b == "Accedi")//se e' la pagina di login allora inserisco il valore del coockie
+	readCookie();
 }
+
+function setAccedi(){
+def['username']=("inserire un nome utente...");
+def['password']=("inserire una password...");
+}
+
+function setInserisciNews(){//funzione che setta i valori standard di alcuni campi comuni a molte pagine
+def['titolo']=("Inserire un titolo...");
+def['alt']=("Inserire una descrizione testuale dell'immagine...");
+def['excerpt']=("Inserire una breve didascalia testuale...");
+def['descrizione']=("Inserire il testo completo dell'articolo...");
+def['tags']=("Inserire dei tags separandoli con una virgola...");
+}
+
+function setInserisciIntervista(){
+setInserisciNews();
+def['intervistato']=("Inserire il nome dell'artista...");
+}
+
+function setInserisciRecensione(){
+setInserisciNews();
+}
+
+function setInserisciEvento(){
+setInserisciNews();
+def['intervistato']=("Inserire il nome dell'artista...");
+def['dataEvento']=("gg/mm/aaaa");
+def['numGiorni']=("inserire la durata dell'evento in giorni..");
+def['luogo']=("Inserire il luogo dell'evento...");
+def['oraInizio']=("Inserire un orario nel formato oo:mm");
+def['oraFine']=("Inserire un orario oo:mm");
+def['indirizzo']=("Inserire il nome della via...");
+def['prezzo']=("Inserire un prezzo...");
+def['email']=("Inserire il proprio indirizzo e-mail...");
+def['telefono']=("Inserire il numero di telefono...");
+}
+
+
 //funzione di utilità per setArray()
 function removeBlankspace(n)
 {
@@ -25,7 +68,7 @@ function removeBlankspace(n)
       n.removeChild(child);//riduco in questo modo childNodes.length
       i--;
     }
-    if(child.nodeType == 1)//document
+    if(child.nodeType == 1)//nodeType==1 controlla se e' un nodo di tipo element
     {
       removeBlankspace(child);
     }
@@ -40,11 +83,11 @@ if(document.getElementById(x).parentNode.lastChild.className == "jsErr")
 	Bbar(x);
 if(checkSonNum(document.getElementById(x).parentNode))
 	insertHelp(x);
-if(document.getElementById(x).value == def[x])
-	document.getElementById(x).value= "";
+/*if(document.getElementById(x).value == def[x])
+	document.getElementById(x).value= "";*/
 }
 
-function checkSonNum(u){
+function checkSonNum(u){//se non e' stato inserito nessun aiuto ritorna true,altrimenti ritorna false
 	if(u.childNodes.length<=1)
 		return true;
 	else
@@ -52,7 +95,7 @@ function checkSonNum(u){
 }
 
 function insertHelp(x){
-	var node=document.createElement("span");//node globale,lo creo qui per la prima volta
+	var node=document.createElement("span");
 	node.className="jsHelp";
 	node.appendChild(document.createTextNode(def[x]));
 	document.getElementById(x).parentNode.appendChild(node);
@@ -61,10 +104,17 @@ function insertHelp(x){
 //FUNZIONI ONBLUR
 
 function Bbar(x){
-//controllo che siano diversi perchè altrimenti selezionando tutto il valore di default di un input(senza fare onclick) e poi facendo onblur l'utente può distruggere i campi input
+//controllo che siano diversi perchè altrimenti selezionando tutto il valore di default di un input(senza fare onclick) e poi facendo onblur l'utente può distruggere i campi di input
 	if(document.getElementById(x).parentNode.lastChild != document.getElementById(x).parentNode.firstChild) 
 		document.getElementById(x).parentNode.removeChild(document.getElementById(x).parentNode.lastChild);
 }
+
+
+
+
+
+
+
 
 //FUNZIONI ONSUBMIT
 
@@ -74,27 +124,47 @@ function createErr(txt){
 	node.appendChild(txt);
 	return node;
 }
-//funzione che richiama i controlli sui singoli campi della form all'interno del ciclo for
+
+
+//funzione che richiama i controlli sui singoli campi della form (vedi ciclo for interno)
 function checkSubmit(){
-var state=true;
-for(var i=0;i< check.length;++i)
-	{
-		var y="C"+check[i];
-		var txt=window[y]();//trasformo la stringa in una chiamata a funzione e il valore ritornato lo salvo in txt
-		var parent=document.getElementById(check[i]).parentNode;
-		if(checkSonNum(parent)&&txt){
-			parent.appendChild(createErr(txt));
+	var state=true;
+	for(var i=0;i< check.length;++i)
+		{
+			var y="C"+check[i];
+			var txt=window[y]();//trasformo la stringa in una chiamata a funzione e il valore ritornato lo salvo in txt
+			var parent=document.getElementById(check[i]).parentNode;
+			if(checkSonNum(parent)&&txt){//se non ci sono aiuti e l'input inserito e' errato
+				parent.appendChild(createErr(txt));
+			}
+			if(txt)	//devo usare un if aggiuntivo e non posso inserirlo nel precedente perchè l'utente potrebbe 	
+					//inserire più volte un form non valido senza cliccare realmente su nessun elemento
+				state=false;
 		}
-		if(txt)//devo usare un if aggiuntivo e non posso inserirlo nel precedente perchè l'utente potrebbe inserire più volte un form non valido senza cliccare realmente su nessun elemento
-			state=false;
+	if(!state)//se ci sono errori avviso l'utente
+	{
+		var d=document.getElementById("formfield").lastChild;
+		if(!(d.tagName.toLowerCase() == 'span'))//se non l'ho gia' avvisato precedentemente
+		{	var n=document.createElement("span");
+			n.className="jsErr";
+			n.id="submitErr";
+			n.innerHTML= "Attenzione!ci sono degli errori di compilazione!";
+			d.parentNode.insertBefore(n,d.nextSibling);
+		}
 	}
-return state;
+	return state;
 }
+
+
+
+
+
+
 
 function Ctitolo(){
 	var t="titolo";
 	var string=document.getElementById(t).value;
-	if(string.length<2 || string.length>75 || string==def[t])
+	if(string.length<2 || string.length>75)
 		return document.createTextNode("inserire un minimo di 2 e un massimo di 75 caratteri");
 	else
 		return false;
@@ -104,7 +174,7 @@ function Calt(){
 	var t="alt";
 	var string=document.getElementById(t).value;
 	var n=countWords(string,' ');
-	if(n<2 || n>50 || string==def[t])
+	if(n<2 || n>50)
 		return document.createTextNode("inserire un minimo di 2 e un massimo di 50 parole");
 	else
 		return false;
@@ -128,7 +198,7 @@ function Cexcerpt(){
 	var t="excerpt";
 	var string=document.getElementById(t).value;
 	var n=countWords(string,' ');
-	if(n<5 || n>50 || string==def[t])
+	if(n<5 || n>50)
 		return document.createTextNode("inserire un minimo di 5 e un massimo di 50 parole");
 	else
 		return false;
@@ -138,7 +208,7 @@ function Cdescrizione(){
 	var t="descrizione";
 	var string=document.getElementById(t).value;
 	var n=countWords(string,' ');
-	if(n<50 || n>500 || string==def[t])
+	if(n<50 || n>500)
 		return document.createTextNode("inserire un minimo di 50 e un massimo di 500 parole");
 	else
 		return false;
@@ -148,7 +218,7 @@ function Ctags(){
 	var t="tags";
 	var string=document.getElementById(t).value;
 	var n=countWords(string,',');
-	if(n<1 || n>20 || string==def[t])
+	if(n<1 || n>20)
 		return document.createTextNode("inserire un minimo di 1 e un massimo di 20 tag,se più di uno allora separarli usando la virgola.");
 	else
 		return false;
@@ -160,7 +230,7 @@ function Cintervistato(){
 	var t="intervistato";
 	var string=document.getElementById(t).value;
 	var n=countWords(string,' ');
-	if(n<1 || n>5 || string==def[t])
+	if(n<1 || n>5)
 		return document.createTextNode("inserire un minimo di 1 e un massimo di 5 parole");
 	else
 		return false;
@@ -168,7 +238,7 @@ function Cintervistato(){
 
 //SUBMIT DI EVENTI
 
-//^([02]\/[0-2][0-9]\/[20](((0|2|4|6|8)(0|4|8))|((1|3|5|7|9)(2|6))))|([02]\/[0-2][0-8]\/[20](([0-9](13|5|7|9))|((1|3|5|7|9)(0|4|8))|((0|2|4|6|8)(2|6))))|((01|03|05|07|08|10|12)\/[0-31]\/[20]\d{2})|((04|06|09|11)\/[0-30]\/[20]\d{2})$/
+
 function CdataEvento(){
 	var t="dataEvento";
 	var string=document.getElementById(t).value;
@@ -190,7 +260,7 @@ function CnumGiorni(){
 function Cluogo(){
 	var t="luogo";
 	var string=document.getElementById(t).value;
-	if(string.length<1 || string.length>58 || string==def[t])
+	if(string.length<1 || string.length>58)
 		return document.createTextNode("inserire un nome di città con al massimo 58 caratteri");
 	else
 		return false;
@@ -214,7 +284,7 @@ function Cindirizzo(){
 	var t="indirizzo";
 	var string=document.getElementById(t).value;
 	num=countWords(string,' ');
-	if(num<2 || num>15 || string==def[t])
+	if(num<2 || num>15)
 		return document.createTextNode("inserire un minimo di 2 e un massimo di 15 parole");
 	else
 		return false;	
@@ -280,17 +350,24 @@ return "";
 
 function checkLogin(){
 	var bool=checkSubmit();
-	if(bool)
-	{	for(var i=0; i<check.length; ++i)
-			setCookie(check[i],document.getElementById(check[i]).value,365);
+	if(bool)//se i dati inseriti sono in un formato valido
+	{
+		var r= confirm("Vuoi salvare un cookie? \n Questo ti permetterà di ricordare le tue credenziali in futuro. \nQueste informazioni resteranno nel tuo computer.");	
+		for(var i=0; i<check.length; ++i)
+		{
+			if(r)
+				setCookie(check[i],document.getElementById(check[i]).value,365);
+			else
+				setCookie(check[i],'');
 		}
+	}
 	return bool;
 }
 //funzioni invocate da checksubmit()
 function Cusername(){
 	var t="username";
 	var string=document.getElementById(t).value;
-	if(string.length<1 || string.length>20 || string==def[t])
+	if(string.length<1 || string.length>20)
 		return document.createTextNode("inserire uno username valido di al massimo 20 caratteri");
 	else
 		return false;
@@ -299,18 +376,135 @@ function Cusername(){
 function Cpassword(p){//se chiamata senza parametri-->p="undefined"
 	p= (typeof(p) === "undefined") ? "password" : p ;
 	var string=document.getElementById(p).value;
-	if(string.length<7 || string.length>20 || string==def[p])
-		return document.createTextNode("inserire una password di 7-20 caratteri");
+	if(string.length<7 || string.length>32 /*|| string==def[p]*/)
+		return document.createTextNode("inserire una password di 7-32 caratteri");
 	else
 		return false;
 }
 
-//----REGISTRAZIONE---
 
-function CconfermaPass(){
-	if(!(Cpassword("confermaPass")) && (document.getElementById("confermaPass").value == document.getElementById("password").value))
-	//sicuramente password è valida,altrimenti l'uguaglianza tra i valori di confermaPass e password fallirebbe
-		return false;
-	else
-		return document.createTextNode("le password non corrispondono oppure la password non é valida");
-}
+//---jQuery
+$(document).ready(function() {
+
+ 	$("#BoxTitoloBk").append("<input type='button' value='Parola inglese' class='tradLink' id='linkEnTitle'></input>");
+	$("#linkEnTitle").click(function(){$('#titolo').val($('#titolo').val()+"<span lang='en'></span>");});
+	$("#BoxTitoloBk").append("<input type='button' value='Parola tedesca' class='tradLink' id='linkDeTitle'></input>");
+	$("#linkDeTitle").click(function(){$('#titolo').val($('#titolo').val()+"<span lang='de'></span>");});
+	$("#BoxTitoloBk").append("<input type='button' value='Parola francese' class='tradLink' id='linkFrTitle'></input>");
+	$("#linkFrTitle").click(function(){$('#titolo').val($('#titolo').val()+"<span lang='fr'></span>");});
+
+//----------------------------
+
+	$("#BoxExcerptBk").append("<input type='button' value='Parola inglese' class='tradLink' id='linkEnexcerpt'></input>");
+	$("#linkEnexcerpt").click(function(){$('#excerpt').val($('#excerpt').val()+"<span lang='en'></span>");});
+	$("#BoxExcerptBk").append("<input type='button' value='Parola tedesca' class='tradLink' id='linkDeexcerpt'></input>");
+	$("#linkDeexcerpt").click(function(){$('#excerpt').val($('#excerpt').val()+"<span lang='de'></span>");});
+	$("#BoxExcerptBk").append("<input type='button' value='Parola francese' class='tradLink' id='linkFrexcerpt'></input>");
+	$("#linkFrexcerpt").click(function(){$('#excerpt').val($('#excerpt').val()+"<span lang='fr'></span>");});
+
+
+
+//----------------------------
+
+	$("#BoxDescrizioneBk").append("<input type='button' value='Parola inglese' class='tradLink' id='linkEndescrizione'></input>");
+	$("#linkEndescrizione").click(function(){$('#descrizione').val($('#descrizione').val()+"<span lang='en'></span>");});
+	$("#BoxDescrizioneBk").append("<input type='button' value='Parola tedesca' class='tradLink' id='linkDedescrizione'></input>");
+	$("#linkDedescrizione").click(function(){$('#descrizione').val($('#descrizione').val()+"<span lang='de'></span>");});
+	$("#BoxDescrizioneBk").append("<input type='button' value='Parola francese' class='tradLink' id='linkFrdescrizione'></input>");
+	$("#linkFrdescrizione").click(function(){$('#descrizione').val($('#descrizione').val()+"<span lang='fr'></span>");});
+
+
+
+//----------------------------
+
+	$("#BoxTagsBk").append("<input type='button' value='Parola inglese' class='tradLink' id='linkEntags'></input>");
+	$("#linkEntags").click(function(){$('#tags').val($('#tags').val()+"<span lang='en'></span>");});
+	$("#BoxTagsBk").append("<input type='button' value='Parola tedesca' class='tradLink' id='linkDetags'></input>");
+	$("#linkDetags").click(function(){$('#tags').val($('#tags').val()+"<span lang='de'></span>");});
+	$("#BoxTagsBk").append("<input type='button' value='Parola francese' class='tradLink' id='linkFrtags'></input>");
+	$("#linkFrtags").click(function(){$('#tags').val($('#tags').val()+"<span lang='fr'></span>");});
+
+
+
+//----------------------------
+
+	$("#BoxluogoBk").append("<input type='button' value='Parola inglese' class='tradLink' id='linkEnluogo'></input>");
+	$("#linkEnluogo").click(function(){$('#luogo').val($('#luogo').val()+"<span lang='en'></span>");});
+	$("#BoxluogoBk").append("<input type='button' value='Parola tedesca' class='tradLink' id='linkDeluogo'></input>");
+	$("#linkDeluogo").click(function(){$('#luogo').val($('#luogo').val()+"<span lang='de'></span>");});
+	$("#BoxluogoBk").append("<input type='button' value='Parola francese' class='tradLink' id='linkFrluogo'></input>");
+	$("#linkFrluogo").click(function(){$('#luogo').val($('#luogo').val()+"<span lang='fr'></span>");});
+
+
+
+//----------------------------
+
+	$("#BoxIndirizzoBk").append("<input type='button' value='Parola inglese' class='tradLink' id='linkEnindirizzo'></input>");
+	$("#linkEnindirizzo").click(function(){$('#indirizzo').val($('#indirizzo').val()+"<span lang='en'></span>");});
+	$("#BoxIndirizzoBk").append("<input type='button' value='Parola tedesca' class='tradLink' id='linkDeindirizzo'></input>");
+	$("#linkDeindirizzo").click(function(){$('#indirizzo').val($('#indirizzo').val()+"<span lang='de'></span>");});
+	$("#BoxIndirizzoBk").append("<input type='button' value='Parola francese' class='tradLink' id='linkFrindirizzo'></input>");
+	$("#linkFrindirizzo").click(function(){$('#indirizzo').val($('#indirizzo').val()+"<span lang='fr'></span>");});
+
+
+//inserisco div push jquery per lo sticky-footer
+$( "#container" ).append( $( "<div id='push'></div>"));
+
+$('body').attr('onload', 'setArray()');
+
+//GESTIONE CHIAMATE CONTROLLO FORMS
+//titolo
+$('#titolo').click(function(){Wbar('titolo');});
+$('#titolo').blur(function(){Bbar('titolo');});
+//Alternativa Testuale
+$('#alt').click(function(){Wbar('alt');});
+$('#alt').blur(function(){Bbar('alt');});
+//Didascalia
+$('#excerpt').click(function(){Wbar('excerpt');});
+$('#excerpt').blur(function(){Bbar('excerpt');});
+//Descrizione
+$('#descrizione').click(function(){Wbar('descrizione');});
+$('#descrizione').blur(function(){Bbar('descrizione');});
+//Tags
+$('#tags').click(function(){Wbar('tags');});
+$('#tags').blur(function(){Bbar('tags');});
+//Intervistato
+$('#intervistato').click(function(){Wbar('intervistato');});
+$('#intervistato').blur(function(){Bbar('intervistato');});
+//Intervistato
+$('#intervistato').click(function(){Wbar('intervistato');});
+$('#intervistato').blur(function(){Bbar('intervistato');});
+//DataEvento
+$('#dataEvento').click(function(){Wbar('dataEvento');});
+$('#dataEvento').blur(function(){Bbar('dataEvento');});
+//Numero giorni
+$('#numGiorni').click(function(){Wbar('numGiorni');});
+$('#numGiorni').blur(function(){Bbar('numGiorni');});
+//Luogo
+$('#luogo').click(function(){Wbar('luogo');});
+$('#luogo').blur(function(){Bbar('luogo');});
+//Ora Inizio
+$('#oraInizio').click(function(){Wbar('oraInizio');});
+$('#oraInizio').blur(function(){Bbar('oraInizio');});
+//Ora Fine
+$('#oraFine').click(function(){Wbar('oraFine');});
+$('#oraFine').blur(function(){Bbar('oraFine');});
+//Indirizzo
+$('#indirizzo').click(function(){Wbar('indirizzo');});
+$('#indirizzo').blur(function(){Bbar('indirizzo');});
+//Prezzo
+$('#prezzo').click(function(){Wbar('prezzo');});
+$('#prezzo').blur(function(){Bbar('prezzo');});
+//Email
+$('#email').click(function(){Wbar('email');});
+$('#email').blur(function(){Bbar('email');});
+//Telefono
+$('#telefono').click(function(){Wbar('telefono');});
+$('#telefono').blur(function(){Bbar('telefono');});
+
+//SUBMISSION
+$('#insertPost').attr('onsubmit','return checkSubmit();');
+
+//fine document ready
+});
+
